@@ -78,29 +78,6 @@ const testimonials = [
 
 const events = [
   {
-    date: "10-12",
-    month: "APR",
-    title: "CFDM - Certified Factory & Digital Manufacturing",
-    batch: "BATCH 1",
-    type: "CERTIFICATION PROGRAM",
-    link: "https://www.instagram.com/p/DRVumqEEq7y/",
-  },
-  {
-    date: "30",
-    month: "APR",
-    title: "Smart Factory 4.0: Integrating IoT & Data-Driven Strategy",
-    type: "PUBLIC TRAINING",
-    link: "https://www.instagram.com/leancore_consultant/",
-  },
-  {
-    date: "1-2",
-    month: "MAY",
-    title: "CSBA - Certified Strategic Business Analyst",
-    batch: "BATCH 1",
-    type: "CERTIFICATION PROGRAM",
-    link: "https://www.instagram.com/leancore_consultant/",
-  },
-  {
     date: "30",
     month: "MAY",
     title: "Supply Chain 4.0: Integrasi Logistik & Pengadaan di Era Disrupsi",
