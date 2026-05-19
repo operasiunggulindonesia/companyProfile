@@ -35,6 +35,7 @@ const partnerLogos = [
   "/partner/supra.png",
   "/partner/rodaLink.jpg",
   "/partner/petroKimia.png",
+  "/partner/uvers.png",
 ];
 
 const allMembers = [
