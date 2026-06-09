@@ -75,13 +75,13 @@ const allMembers = [
     ],
   },
   {
-    image: "/vero.png",
-    name: "Veronika Juliana Purwandanu, S.M.",
-    linkedin: "https://www.linkedin.com/in/veronikajuliana/?locale=en_US",
+    image: "/adhiya.jpeg",
+    name: "Adhiya Nashwa Ardhana",
+    linkedin: "https://www.linkedin.com/in/adhiya-nashwa-8b1a00342/",
     expertise: [
-      "Client Relationship Management",
-      "Account & Pipeline Management",
-    ],
+    "Financial Management & Reporting",
+    "Tax Planning & Compliance",
+  ]
   },
 ];
 
@@ -143,7 +143,7 @@ const trainers = [
     expertise: ["Strategic Business Analyst"],
   },
   {
-    name: "Wiraatmaja Lookman",
+    name: "Wiraatmaja Lookman., ST., M.Log",
     position: "Direktur dan Ahli K3 Umum PT. Lookman Djaja Logistic",
     linkedin: "https://www.linkedin.com/in/wiraatmaja-lookman-27427179",
     expertise: ["Logistics Management"],
@@ -162,21 +162,21 @@ const trainers = [
     expertise: ["Stakeholder Advocacy"],
   },
   {
-    name: "Ian Gibranata",
+    name: "Ian Gibranata., ST., MMT., CSCM",
     position:
       "Operations Excellence & Management Specialist at Sinar Baja Electric | LSS Green Belt Certified",
     linkedin: "https://www.linkedin.com/in/ian-gibranata-82974725a",
     expertise: ["Operational Excellence"],
   },
   {
-    name: "Novi Nastiti",
+    name: "Novi Nastiti., S.Kom., M. Kom",
     position: "Associate Trainer",
     linkedin:
       "https://www.linkedin.com/in/noviprastiti/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BTiMQyiemQfmN8uzNIdWOsw%3D%3D",
     expertise: ["Retail Management"],
   },
   {
-    name: "Anita Safitri",
+    name: "Anita Safitri., S.Kom., M.Kom",
     position: "Associate Trainer",
     linkedin: "https://www.linkedin.com/in/anita-safitri-0016a5254/",
     expertise: ["Retail Management"],
