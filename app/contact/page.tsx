@@ -632,14 +632,14 @@ export default function Contact() {
               <div>
                 <div className="hours-row">
                   <span className="hours-day">Monday – Friday</span>
-                  <span className="hours-time">09:00 – 17:00</span>
+                  <span className="hours-time">10:00 – 18:00</span>
                 </div>
                 <div className="hours-row">
                   <span className="hours-day">
                     Saturday
                     <span className="hours-badge">HALF DAY</span>
                   </span>
-                  <span className="hours-time">09:00 – 13:00</span>
+                  <span className="hours-time">10:00 – 13:00</span>
                 </div>
                 <div className="hours-row">
                   <span className="hours-day">Sunday</span>

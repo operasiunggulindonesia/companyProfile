@@ -124,6 +124,28 @@ const certifications = [
       },
     ],
   },
+   {
+    title: "Certified Professional in Logistics Management (CPLM)",
+    summary: "Strategic logistics management covering distribution, transportation, and supply chain operations.",
+    syllabusUrl: "/silabus/silabus-cplm.pdf",
+    details: [
+      {
+        label: "Format",
+        value: "3-day session with an integrated case study.",
+      },
+      {
+        label: "Topics",
+        items: [
+          "Introduction to Logistics Management",
+          "Logistics Network Design",
+          "Inventory Management",
+          "Transportation Logistics Management",
+          "Reengineering the Supply Chain Using IT and ITS",
+          "Distribution Strategy",
+        ],
+      },
+    ],
+  },
 ];
 
 const aafmCredentials = [

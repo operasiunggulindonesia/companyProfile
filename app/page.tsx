@@ -78,20 +78,6 @@ const testimonials = [
 
 const events = [
   {
-    date: "30",
-    month: "MAY",
-    title: "Supply Chain 4.0: Integrasi Logistik & Pengadaan di Era Disrupsi",
-    type: "WEBINAR",
-    link: "https://www.instagram.com/leancore_consultant/",
-  },
-  {
-    date: "26",
-    month: "JUN",
-    title: "Global Supply Chain Resilience: Navigating Risk & Uncertainty",
-    type: "PUBLIC TRAINING",
-    link: "https://www.instagram.com/leancore_consultant/",
-  },
-  {
     date: "3-4",
     month: "JUL",
     title: "CSCM - Certified Supply Chain Manager",
