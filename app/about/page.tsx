@@ -150,7 +150,7 @@ const trainers = [
   },
   {
     name: "Dr. Ferdy Yap, S.E., M.M.",
-    position: "Direktur Utama Global Trans Logistics",
+    position: "General Manager Global Pratama Group",
     linkedin: "https://www.linkedin.com/in/ferdy-yap-4a234a389",
     expertise: ["Logistics Operations"],
   },
