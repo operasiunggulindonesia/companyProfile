@@ -33,6 +33,7 @@ const services = [
       "Certified Supply Chain Manager (CSCM)",
       "Certified International Project Manager (CIPM)",
       "Certified Forecast Demand Manager (CFDM)",
+      "Certified Professional in Logistics Management (CPLM)"
     ],
   },
   {
