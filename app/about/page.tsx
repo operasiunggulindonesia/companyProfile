@@ -116,13 +116,7 @@ const trainers = [
     linkedin: "https://www.linkedin.com/in/edward-cesario-cscm-8235561b/",
     expertise: ["Supply Chain Management"],
   },
-  {
-    name: "Eufemia Citra, M.Farm, CSCM",
-    position: "PPIC & Warehouse Manager Mega Lifesciences Indonesia",
-    linkedin:
-      "https://www.linkedin.com/in/apt-eufemia-citra-m-farm-cscm-1450a6102/",
-    expertise: ["Supply Chain Management"],
-  },
+ 
   {
     name: "Dr. Ir. Bagusranu Wahyudi Putra, ST., MM., MMT., CSCA., CSCM",
     position:
