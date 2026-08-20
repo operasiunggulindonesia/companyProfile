@@ -4,38 +4,47 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState, useRef } from "react";
 
-const partnerLogos = [
-  "/partner/mapnGroup.png",
+// ================= Partner Industri =================
+const industryPartnerLogos = [
   "/partner/bankArthaya.png",
-  "/partner/kimiaFarma.png",
-  "/partner/cocaCola.png",
-  "/partner/mandiri.png",
-  "/partner/sig.jpg",
-  "/partner/pmpGroup.png",
-  "/partner/HMSampoerna.png",
-  "/partner/mpmMotor.jpg",
-  "/partner/univPertahanan.jpg",
-  "/partner/perhimpunan.png",
-  "/partner/pratamaGroup.png",
-  "/partner/uc.jpg",
-  "/partner/kementrianPertahanan.png",
-  "/partner/tutWuri.jpg",
-  "/partner/ot.png",
   "/partner/cbos.jpg",
+  "/partner/cocaCola.png",
+  "/partner/freeport.png",
+  "/partner/HMSampoerna.png",
   "/partner/idFood.png",
-  "/partner/silog.jpg",
+  "/partner/kai.png",
+  "/partner/kementrianPertahanan.png",
+  "/partner/kiabadi.png",
+  "/partner/kimiaFarma.png",
+  "/partner/logo_global.png",
   "/partner/maesaGroup.jpg",
+  "/partner/mandiri.png",
+  "/partner/mapnGroup.png",
+  "/partner/mpmMotor.jpg",
+  "/partner/ot.png",
+  "/partner/perhimpunan.png",
+  "/partner/petroKimia.png",
+  "/partner/pln.png",
+  "/partner/pmpGroup.png",
+  "/partner/pratamaGroup.png",
+  "/partner/rodaLink.jpg",
+  "/partner/sig.jpg",
+  "/partner/silog.jpg",
+  "/partner/supra.png",
   "/partner/ubmBiscuits.png",
   "/partner/visiniaga.png",
-  "/partner/pln.png",
-  "/partner/kai.png",
-  "/partner/kiabadi.png",
-  "/partner/freeport.png",
-  "/partner/logo_global.png",
-  "/partner/supra.png",
-  "/partner/rodaLink.jpg",
-  "/partner/petroKimia.png",
+];
+
+// ================= Partner Universitas =================
+const universityPartnerLogos = [
+  "/partner/uc.jpg",
+  "/partner/univPertahanan.jpg",
   "/partner/uvers.png",
+  "/partner/tutWuri.jpg",
+  "/partner/utm.png",
+  "/partner/matana.png",
+  "/partner/unhas.jpg",
+
 ];
 
 const allMembers = [
@@ -2004,16 +2013,17 @@ export default function AboutCompany() {
           </div>
         </section>
 
-        {/* ── TRUSTED PARTNERS ── */}
+        {/* ── PARTNERS ── */}
         <section className="partners-section">
-          <div className="sec-wrap" style={{ paddingBottom: 48 }}>
+          <div className="sec-wrap">
+            {/* Industry Partners */}
             <p
               className="sec-eyebrow"
               data-animate
               data-anim="up"
               data-delay="0"
             >
-              COLLABORATIONS
+              OUR COLLABORATIONS
             </p>
             <h2
               className="sec-title"
@@ -2021,10 +2031,11 @@ export default function AboutCompany() {
               data-anim="up"
               data-delay="1"
             >
-              Our Trusted Partners
+              Our Industry Partners
             </h2>
             <p className="sec-desc" data-animate data-anim="up" data-delay="2">
-              Collaborating with leading organizations across industries.
+              Collaborating with leading companies and organizations across
+              various industries.
             </p>
             <div
               className="sec-divider"
@@ -2032,36 +2043,90 @@ export default function AboutCompany() {
               data-anim="fade"
               data-delay="3"
             />
-          </div>
-          <div
-            className="marquee-wrap"
-            style={{ paddingBottom: 80 }}
-            data-animate
-            data-anim="fade"
-            data-delay="0"
-          >
-            <div className="marquee-track">
-              {[...partnerLogos, ...partnerLogos].map((logo, i) => (
-                <div
-                  key={i}
-                  style={{
-                    flexShrink: 0,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    padding: "0 16px",
-                  }}
-                >
-                  <Image
-                    src={logo}
-                    alt="Partner Logo"
-                    width={160}
-                    height={80}
-                    className="object-contain"
-                    style={{ maxHeight: 72, width: "auto" }}
-                  />
-                </div>
-              ))}
+            <div
+              className="marquee-wrap"
+              style={{ paddingBottom: 80 }}
+              data-animate
+              data-anim="fade"
+              data-delay="0"
+            >
+              <div className="marquee-track">
+                {[...industryPartnerLogos, ...industryPartnerLogos].map(
+                  (logo, i) => (
+                    <div
+                      key={`industry-${i}`}
+                      style={{
+                        flexShrink: 0,
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        padding: "0 16px",
+                      }}
+                    >
+                      <Image
+                        src={logo}
+                        alt="Industry Partner Logo"
+                        width={160}
+                        height={80}
+                        className="object-contain"
+                        style={{ maxHeight: 72, width: "auto" }}
+                      />
+                    </div>
+                  ),
+                )}
+              </div>
+            </div>
+
+            {/* University Partners */}
+            <h2
+              className="sec-title"
+              data-animate
+              data-anim="up"
+              data-delay="1"
+            >
+              Our University Partners
+            </h2>
+            <p className="sec-desc" data-animate data-anim="up" data-delay="2">
+              Partnering with leading academic institutions to support
+              research and development.
+            </p>
+            <div
+              className="sec-divider"
+              data-animate
+              data-anim="fade"
+              data-delay="3"
+            />
+            <div
+              className="marquee-wrap"
+              data-animate
+              data-anim="fade"
+              data-delay="0"
+            >
+              <div className="marquee-track">
+                {[...universityPartnerLogos, ...universityPartnerLogos].map(
+                  (logo, i) => (
+                    <div
+                      key={`university-${i}`}
+                      style={{
+                        flexShrink: 0,
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        padding: "0 16px",
+                      }}
+                    >
+                      <Image
+                        src={logo}
+                        alt="University Partner Logo"
+                        width={160}
+                        height={80}
+                        className="object-contain"
+                        style={{ maxHeight: 72, width: "auto" }}
+                      />
+                    </div>
+                  ),
+                )}
+              </div>
             </div>
           </div>
         </section>

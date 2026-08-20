@@ -348,6 +348,24 @@ export default function Footer() {
                 <li className="footer-contact-item">
                   <span className="footer-contact-icon">
                     <Image
+                      src="/loc.svg"
+                      alt="Location"
+                      width={13}
+                      height={13}
+                      className="brightness-0 invert"
+                    />
+                  </span>
+                  <span>
+                    Matana University Tower, Jl. CBD Barat No. Kav. 1
+                    <br />
+                    Curug Sangereng, Kec. Kelapa Dua
+                    <br />
+                    Kabupaten Tangerang, Banten 15810
+                  </span>
+                </li>
+                <li className="footer-contact-item">
+                  <span className="footer-contact-icon">
+                    <Image
                       src="/wa.svg"
                       alt="WhatsApp"
                       width={13}
@@ -370,7 +388,7 @@ export default function Footer() {
                   <span>operasiunggulindonesia@gmail.com</span>
                 </li>
               </ul>
-
+            </div>
               {/* Socials */}
               <div className="footer-socials">
                 <a
@@ -404,7 +422,7 @@ export default function Footer() {
               </div>
             </div>
           </div>
-        </div>
+        
 
         {/* Bottom bar */}
         <div className="footer-bottom">

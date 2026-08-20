@@ -390,10 +390,24 @@ export default function Contact() {
           margin-bottom: 20px;
         }
 
+        .map-row {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 20px;
+        }
+
+        .map-col-label {
+          font-size: 12px;
+          font-weight: 700;
+          letter-spacing: 0.04em;
+          color: #004276;
+          margin-bottom: 10px;
+        }
+
         .map-wrap {
           border: 1px solid #E2E8F0;
           overflow: hidden;
-          height: 420px;
+          height: 340px;
         }
 
         .map-wrap iframe {
@@ -440,6 +454,7 @@ export default function Contact() {
         @media (max-width: 1024px) {
           .contact-cards-grid { grid-template-columns: 1fr 1fr; }
           .contact-bottom-row { grid-template-columns: 1fr; }
+          .map-row { grid-template-columns: 1fr; }
         }
 
         @media (max-width: 640px) {
@@ -661,16 +676,33 @@ export default function Contact() {
               <p className="section-eyebrow">LOCATION</p>
               <h2 className="contact-section-title">Visit Our Office</h2>
               <p className="contact-section-sub" style={{ marginBottom: 0 }}>
-                We'd be happy to welcome you to our office in Surabaya.
+                We'd be happy to welcome you at our office in Surabaya, or our
+                partner campus at Matana University.
               </p>
             </div>
-            <div className="map-wrap">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.3089064359926!2d112.7169!3d-7.2953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fb82b2b3e3e5%3A0x4027a76e352e1d0!2sJl.%20Raya%20Darmo%20Permai%2C%20Surabaya!5e0!3m2!1sen!2sid"
-                allowFullScreen
-                loading="lazy"
-                title="LeanCore Office Location"
-              />
+            <div className="map-row">
+              <div className="map-col">
+                <p className="map-col-label">LeanCore Office, Surabaya</p>
+                <div className="map-wrap">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.3089064359926!2d112.7169!3d-7.2953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fb82b2b3e3e5%3A0x4027a76e352e1d0!2sJl.%20Raya%20Darmo%20Permai%2C%20Surabaya!5e0!3m2!1sen!2sid"
+                    allowFullScreen
+                    loading="lazy"
+                    title="LeanCore Office Location"
+                  />
+                </div>
+              </div>
+              <div className="map-col">
+                <p className="map-col-label">Matana University, Partner Campus</p>
+                <div className="map-wrap">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3966.1444686493924!2d106.6223222!3d-6.2446846!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fc0b4ad2be97%3A0xf6124d0ed9b281ee!2sMatana%20University!5e0!3m2!1sen!2sid!4v1785395699032!5m2!1sen!2sid"
+                    allowFullScreen
+                    loading="lazy"
+                    title="Matana University Location"
+                  />
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>

@@ -1,6 +1,9 @@
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { articlesContent as articles } from "@/lib/articles-content";
+
 const insights = [
   {
     image: "/insight/insight1.jpeg",
@@ -94,6 +97,10 @@ const insights = [
 export default function Insights() {
   const [flipped, setFlipped] = useState<number | null>(null);
   const [visible, setVisible] = useState(false);
+  const [visibleCount, setVisibleCount] = useState(6);
+  const INCREMENT = 6;
+  const [visibleArticleCount, setVisibleArticleCount] = useState(3);
+  const ARTICLE_INCREMENT = 3;
 
   useEffect(() => {
     const t = setTimeout(() => setVisible(true), 100);
@@ -321,7 +328,131 @@ export default function Insights() {
           background: linear-gradient(to right, var(--yellow), var(--gray-200), transparent);
         }
 
-        /* ── GRID ── */
+        /* ── ARTICLES ── */
+        .articles-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+          gap: 28px;
+          padding: 48px 48px 80px;
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+
+        .article-card {
+          background: var(--white);
+          border: 1px solid var(--gray-200);
+          border-radius: 4px;
+          overflow: hidden;
+          text-decoration: none;
+          display: flex;
+          flex-direction: column;
+          box-shadow: 0 4px 24px rgba(0,66,118,0.06);
+          transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .article-card:hover {
+          box-shadow: 0 14px 44px rgba(0,66,118,0.14);
+          transform: translateY(-4px);
+        }
+
+        .article-image-wrap {
+          position: relative;
+          width: 100%;
+          aspect-ratio: 16 / 10;
+          overflow: hidden;
+          background: var(--gray-100);
+        }
+
+        .article-image-wrap img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.5s ease;
+        }
+
+        .article-card:hover .article-image-wrap img {
+          transform: scale(1.05);
+        }
+
+        .article-category {
+          position: absolute;
+          top: 14px;
+          left: 14px;
+          background: var(--yellow);
+          color: var(--navy);
+          font-size: 9px;
+          font-weight: 700;
+          letter-spacing: 0.16em;
+          padding: 4px 10px;
+          border-radius: 2px;
+        }
+
+        .article-content {
+          padding: 22px 22px 24px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          border-top: 3px solid var(--yellow);
+          flex: 1;
+        }
+
+        .article-meta {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          font-size: 10.5px;
+          font-weight: 600;
+          letter-spacing: 0.08em;
+          color: var(--gray-500);
+        }
+
+        .article-meta-dot {
+          width: 3px;
+          height: 3px;
+          border-radius: 50%;
+          background: var(--gray-500);
+          flex-shrink: 0;
+        }
+
+        .article-title {
+          font-size: 17px;
+          font-weight: 700;
+          color: var(--navy);
+          line-height: 1.35;
+        }
+
+        .article-excerpt {
+          font-size: 13px;
+          font-weight: 300;
+          color: var(--gray-500);
+          line-height: 1.65;
+          flex: 1;
+        }
+
+        .article-read-cta {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          font-size: 11px;
+          font-weight: 600;
+          letter-spacing: 0.12em;
+          color: var(--navy);
+          margin-top: 8px;
+        }
+
+        .article-card:hover .article-read-cta {
+          color: var(--yellow-dark);
+        }
+
+        .article-read-arrow {
+          transition: transform 0.2s;
+        }
+
+        .article-card:hover .article-read-arrow {
+          transform: translateX(4px);
+        }
+
+        /* ── GRID (Insights) ── */
         .insights-grid {
           display: grid;
           grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
@@ -329,22 +460,12 @@ export default function Insights() {
           padding: 48px 48px 80px;
           max-width: 1200px;
           margin: 0 auto;
-          /* align-items: start so cards don't stretch to match tallest */
           align-items: start;
         }
 
-        /* ── CARD ── */
-        /*
-          Key fix: remove fixed height on card-wrapper.
-          Use a flip container that adapts to content height.
-          We achieve the flip effect by keeping both faces in the DOM
-          but using visibility + rotateY. The front face is the natural
-          height driver; the back mirrors that with min-height.
-        */
         .card-wrapper {
           position: relative;
           cursor: pointer;
-          /* perspective for 3D flip */
           perspective: 1200px;
         }
 
@@ -366,9 +487,8 @@ export default function Insights() {
           overflow: hidden;
         }
 
-        /* FRONT — natural height, in flow */
         .card-front {
-          position: relative; /* in normal flow → sets card height */
+          position: relative;
           background: var(--white);
           border: 1px solid var(--gray-200);
           box-shadow: 0 4px 24px rgba(0,66,118,0.08);
@@ -382,11 +502,9 @@ export default function Insights() {
           transform: translateY(-4px);
         }
 
-        /* Image: use aspect-ratio so full image shows, no cropping */
         .card-image-wrap {
           position: relative;
           width: 100%;
-          /* Portrait infographic images — use 4:5 ratio to show most content */
           aspect-ratio: 4 / 5;
           overflow: hidden;
           background: var(--gray-100);
@@ -477,7 +595,6 @@ export default function Insights() {
           transform: translateX(4px);
         }
 
-        /* BACK — absolutely positioned, same size as front */
         .card-back {
           position: absolute;
           inset: 0;
@@ -558,6 +675,49 @@ export default function Insights() {
           line-height: 1.75;
         }
 
+        /* ── LOAD MORE ── */
+        .load-more-wrap {
+          display: flex;
+          justify-content: center;
+          padding: 0 48px 80px;
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+
+        .load-more-btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          background: var(--navy);
+          color: var(--white);
+          border: 1.5px solid var(--navy);
+          font-size: 12px;
+          font-weight: 700;
+          letter-spacing: 0.14em;
+          padding: 14px 32px;
+          border-radius: 2px;
+          cursor: pointer;
+          transition: background 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
+        }
+
+        .load-more-btn:hover {
+          background: var(--yellow);
+          color: var(--navy);
+          border-color: var(--yellow);
+          transform: translateY(-2px);
+          box-shadow: 0 10px 30px rgba(0,66,118,0.18);
+        }
+
+        .load-more-count {
+          font-weight: 400;
+          color: rgba(255,255,255,0.6);
+          letter-spacing: 0.02em;
+        }
+
+        .load-more-btn:hover .load-more-count {
+          color: rgba(0,66,118,0.6);
+        }
+
         /* ── WHATSAPP FLOATING ── */
         .wa-float {
           position: fixed;
@@ -590,7 +750,9 @@ export default function Insights() {
         @media (max-width: 768px) {
           .hero { padding: 80px 24px 80px; }
           .section-header { padding: 56px 24px 36px; }
+          .articles-grid { grid-template-columns: 1fr; padding: 36px 24px 56px; gap: 20px; }
           .insights-grid { grid-template-columns: 1fr; padding: 36px 24px 56px; gap: 20px; }
+          .load-more-wrap { padding: 0 24px 56px; }
         }
       `}</style>
 
@@ -622,9 +784,74 @@ export default function Insights() {
           <div className="hero-bottom-fade" />
         </section>
 
-        {/* ── SECTION HEADER ── */}
+        {/* ── ARTICLES SECTION HEADER ── */}
         <div className="section-header">
-          <p className="section-eyebrow">FEATURED ARTICLES</p>
+          <p className="section-eyebrow">IN-DEPTH READING</p>
+          <h2 className="section-title">Articles</h2>
+          <p className="section-desc">
+            Long-form perspectives and practical frameworks from our
+            consulting practice.
+          </p>
+          <div className="section-rule" />
+        </div>
+
+        {/* ── ARTICLES GRID ── */}
+        <div className="articles-grid">
+          {articles.slice(0, visibleArticleCount).map((item) => (
+            <Link
+              key={item.slug}
+              href={`/article/${item.slug}`}
+              className="article-card"
+            >
+              <div className="article-image-wrap">
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width:768px) 100vw, 33vw"
+                />
+                <span className="article-category">{item.category}</span>
+              </div>
+              <div className="article-content">
+                <div className="article-meta">
+                  <span>{item.date}</span>
+                  <span className="article-meta-dot" />
+                  <span>{item.readTime}</span>
+                </div>
+                <h3 className="article-title">{item.title}</h3>
+                <p className="article-excerpt">{item.excerpt}</p>
+                <span className="article-read-cta">
+                  READ ARTICLE
+                  <span className="article-read-arrow">→</span>
+                </span>
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        {/* ── ARTICLES LOAD MORE ── */}
+        {visibleArticleCount < articles.length && (
+          <div className="load-more-wrap">
+            <button
+              className="load-more-btn"
+              onClick={() =>
+                setVisibleArticleCount((c) =>
+                  Math.min(c + ARTICLE_INCREMENT, articles.length)
+                )
+              }
+            >
+              LOAD MORE
+              <span className="load-more-count">
+                ({articles.length - visibleArticleCount} others)
+              </span>
+            </button>
+          </div>
+        )}
+
+        {/* ── INSIGHTS SECTION HEADER ── */}
+        <div className="section-header">
+          <p className="section-eyebrow">QUICK TAKEAWAYS</p>
           <h2 className="section-title">Latest Perspectives</h2>
           <p className="section-desc">
             Click the card to read the full insight from our operational
@@ -633,16 +860,15 @@ export default function Insights() {
           <div className="section-rule" />
         </div>
 
-        {/* ── GRID ── */}
+        {/* ── INSIGHTS GRID ── */}
         <div className="insights-grid">
-          {insights.map((item, index) => (
+          {insights.slice(0, visibleCount).map((item, index) => (
             <div
               key={index}
               className={`card-wrapper${flipped === index ? " flipped" : ""}`}
               onClick={() => setFlipped(flipped === index ? null : index)}
             >
               <div className="card-inner">
-                {/* FRONT — natural height, drives card size */}
                 <div className="card-face card-front">
                   <div className="card-image-wrap">
                     <Image
@@ -665,7 +891,6 @@ export default function Insights() {
                   </div>
                 </div>
 
-                {/* BACK — absolutely fills the same space as front */}
                 <div className="card-face card-back">
                   <div className="card-back-header">
                     <span className="card-back-tag">{item.tag}</span>
@@ -688,6 +913,23 @@ export default function Insights() {
             </div>
           ))}
         </div>
+
+        {/* ── LOAD MORE BUTTON ── */}
+        {visibleCount < insights.length && (
+          <div className="load-more-wrap">
+            <button
+              className="load-more-btn"
+              onClick={() =>
+                setVisibleCount((c) => Math.min(c + INCREMENT, insights.length))
+              }
+            >
+              LOAD MORE
+              <span className="load-more-count">
+                ({insights.length - visibleCount} others)
+              </span>
+            </button>
+          </div>
+        )}
 
         {/* ── WA FLOAT ── */}
         <a

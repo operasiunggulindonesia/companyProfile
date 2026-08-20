@@ -33,21 +33,21 @@ const openings = [
       "Interest in curriculum development or digital products",
     ],
   },
-  {
-    id: 3,
-    title: "Creative Content & Design Intern",
-    type: "Internship",
-    location: "Remote / Surabaya",
-    department: "Marketing & Creative",
-    comingSoon: false,
-    desc: "Create compelling visual and written content across social media, website, and digital channels to attract professionals and organizations to Leancore's programs.",
-    requirements: [
-      "Portfolio of graphic design or social media content",
-      "Proficient in Canva, Figma, or Adobe tools",
-      "Copywriting skills in Indonesian or English",
-      "Familiar with Instagram and LinkedIn",
-    ],
-  },
+  // {
+  //   id: 3,
+  //   title: "Creative Content & Design Intern",
+  //   type: "Internship",
+  //   location: "Remote / Surabaya",
+  //   department: "Marketing & Creative",
+  //   comingSoon: false,
+  //   desc: "Create compelling visual and written content across social media, website, and digital channels to attract professionals and organizations to Leancore's programs.",
+  //   requirements: [
+  //     "Portfolio of graphic design or social media content",
+  //     "Proficient in Canva, Figma, or Adobe tools",
+  //     "Copywriting skills in Indonesian or English",
+  //     "Familiar with Instagram and LinkedIn",
+  //   ],
+  // },
 ];
 
 const values = [

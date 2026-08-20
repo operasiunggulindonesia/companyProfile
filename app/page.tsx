@@ -77,36 +77,8 @@ const testimonials = [
 ];
 
 const events = [
-  {
-    date: "3-4",
-    month: "JUL",
-    title: "CSCM - Certified Supply Chain Manager",
-    batch: "BATCH 2",
-    type: "CERTIFICATION PROGRAM",
-    link: "https://www.instagram.com/leancore_consultant/",
-  },
-  {
-    date: "25",
-    month: "JUL",
-    title: "Inventory Crisis: Cara Memangkas Biaya Stok Tanpa Kehabisan Barang",
-    type: "WEBINAR",
-    link: "https://www.instagram.com/leancore_consultant/",
-  },
-  {
-    date: "1-2",
-    month: "AUG",
-    title: "CRME - Certified Risk Management Expert",
-    batch: "BATCH 2",
-    type: "CERTIFICATION PROGRAM",
-    link: "https://www.instagram.com/leancore_consultant/",
-  },
-  {
-    date: "14",
-    month: "AUG",
-    title: "TQM Mastery: Building a Culture of Continuous Improvement",
-    type: "PUBLIC TRAINING",
-    link: "https://www.instagram.com/leancore_consultant/",
-  },
+
+  
   {
     date: "05",
     month: "SEP",
