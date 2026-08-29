@@ -1464,7 +1464,7 @@ export default function AboutCompany() {
                 <div className="welcome-photo-border" />
                 <img
                   className="welcome-photo-img"
-                  src="/timotius.png"
+                  src="/timotius.jpeg"
                   alt="Dr. Timotius Febry"
                 />
               </div>
