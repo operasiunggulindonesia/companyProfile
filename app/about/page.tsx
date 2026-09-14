@@ -33,6 +33,7 @@ const industryPartnerLogos = [
   "/partner/supra.png",
   "/partner/ubmBiscuits.png",
   "/partner/visiniaga.png",
+  "/partner/IcePro_Solusindo.png",
 ];
 
 // ================= Partner Universitas =================
