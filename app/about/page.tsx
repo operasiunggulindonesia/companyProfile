@@ -91,7 +91,15 @@ const allMembers = [
     expertise: [
     "Financial Management & Reporting",
     "Tax Planning & Compliance",
-  ]
+    ]
+  },
+  {
+    image: "/ratih.jpg",
+    name: "Ratih Mar'atus Sholihah",
+    linkedin: "https://www.linkedin.com/in/ratih-mar-atus-sholihah-8a08a1319/",
+    expertise: [
+    "Design & Develop reliable and scalable software aligned with business goals",
+   ]
   },
 ];
 
