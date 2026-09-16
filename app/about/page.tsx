@@ -1062,14 +1062,9 @@ export default function AboutCompany() {
 
         .team-grid {
           display: grid;
-          grid-template-columns: repeat(6, 1fr);
+          grid-template-columns: repeat(3, 1fr);
           gap: 24px;
         }
-        .team-grid .team-card:nth-child(1) { grid-column: span 2; }
-        .team-grid .team-card:nth-child(2) { grid-column: span 2; }
-        .team-grid .team-card:nth-child(3) { grid-column: span 2; }
-        .team-grid .team-card:nth-child(4) { grid-column: 2 / span 2; }
-        .team-grid .team-card:nth-child(5) { grid-column: 4 / span 2; }
         /* Shared card styles */
         .team-card {
           position: relative;
