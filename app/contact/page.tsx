@@ -538,11 +538,17 @@ export default function Contact() {
               </div>
               <h3 className="contact-card-title">Office Address</h3>
               <p className="contact-card-text">
+                Voza Tower Surabaya, 8th Floor
+                <br />
+                Jl. Mayjen HR. Muhammad No.31, Putat Gede,
+                <br />
+                Kec. Sukomanunggal, Surabaya, Jawa Timur
+                {/* <br />
                 Jl. Raya Darmo Permai, Pradahkalikendal
                 <br />
                 Kec. Dukuhpakis, Surabaya
                 <br />
-                Jawa Timur, Indonesia
+                Jawa Timur, Indonesia */}
               </p>
             </motion.div>
 
@@ -616,7 +622,7 @@ export default function Contact() {
               </p>
               <div className="social-btns">
                 <a
-                  href="https://www.instagram.com/leancore_consultant/"
+                  href="https://www.instagram.com/leancore_consulting/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="social-btn"
@@ -647,14 +653,14 @@ export default function Contact() {
               <div>
                 <div className="hours-row">
                   <span className="hours-day">Monday – Friday</span>
-                  <span className="hours-time">10:00 – 18:00</span>
+                  <span className="hours-time">08:30 – 17:30</span>
                 </div>
                 <div className="hours-row">
                   <span className="hours-day">
                     Saturday
                     <span className="hours-badge">HALF DAY</span>
                   </span>
-                  <span className="hours-time">10:00 – 13:00</span>
+                  <span className="hours-time">08:30 – 13:00</span>
                 </div>
                 <div className="hours-row">
                   <span className="hours-day">Sunday</span>
@@ -685,7 +691,7 @@ export default function Contact() {
                 <p className="map-col-label">LeanCore Office, Surabaya</p>
                 <div className="map-wrap">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.3089064359926!2d112.7169!3d-7.2953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fb82b2b3e3e5%3A0x4027a76e352e1d0!2sJl.%20Raya%20Darmo%20Permai%2C%20Surabaya!5e0!3m2!1sen!2sid"
+                    src="https://www.google.com/maps?q=Voza%20Tower%20Surabaya&output=embed"
                     allowFullScreen
                     loading="lazy"
                     title="LeanCore Office Location"
