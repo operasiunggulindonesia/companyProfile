@@ -339,11 +339,16 @@ export default function Footer() {
                       className="brightness-0 invert"
                     />
                   </span>
-                  <span>
-                    Jl. Raya Darmo Permai, Dukuhpakis
+                  <a
+                    href="https://maps.app.goo.gl/WYJQrydV51JepeLFA"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="footer-contact-link"
+                  >
+                    Voza Tower Surabaya, 8th Floor,
                     <br />
-                    Surabaya, Indonesia
-                  </span>
+                    Jl. Mayjen HR. Muhammad No.31, Putat Gede, Kec. Sukomanunggal, Surabaya, Jawa Timur 60189
+                  </a>
                 </li>
                 <li className="footer-contact-item">
                   <span className="footer-contact-icon">
@@ -355,13 +360,16 @@ export default function Footer() {
                       className="brightness-0 invert"
                     />
                   </span>
-                  <span>
-                    Matana University Tower, Jl. CBD Barat No. Kav. 1
+                  <a
+                    href="https://maps.app.goo.gl/93QSUjZQncLZiT6r6"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="footer-contact-link"
+                  >
+                    Matana University Tower, 
                     <br />
-                    Curug Sangereng, Kec. Kelapa Dua
-                    <br />
-                    Kabupaten Tangerang, Banten 15810
-                  </span>
+                    Jl. CBD Barat No. Kav. 1, Curug Sangereng, Kec. Kelapa Dua, Kabupaten Tangerang, Banten 15810
+                  </a>
                 </li>
                 <li className="footer-contact-item">
                   <span className="footer-contact-icon">
@@ -373,7 +381,14 @@ export default function Footer() {
                       className="brightness-0 invert"
                     />
                   </span>
-                  <span>+62 818-0354-0000</span>
+                  <a
+                    href="https://wa.me/6281803540000"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="footer-contact-link"
+                  >
+                    +62 818-0354-0000
+                  </a>
                 </li>
                 <li className="footer-contact-item">
                   <span className="footer-contact-icon">
@@ -385,7 +400,12 @@ export default function Footer() {
                       className="brightness-0 invert"
                     />
                   </span>
-                  <span>operasiunggulindonesia@gmail.com</span>
+                  <a
+                    href="mailto:operasiunggulindonesia@gmail.com"
+                    className="footer-contact-link"
+                  >
+                    operasiunggulindonesia@gmail.com
+                  </a>
                 </li>
               </ul>
             </div>
