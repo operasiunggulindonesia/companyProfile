@@ -84,6 +84,9 @@ const workshopPhotos = [
   { src: "/services/workshop/workshop1.png" },
   { src: "/services/workshop/workshop2.jpeg" },
   { src: "/services/workshop/workshop3.jpeg" },
+  { src: "/services/workshop/workshop5.jpg" },
+  { src: "/services/workshop/workshop4.jpg" },
+  
 ];
 
 export default function WorkshopTraining() {
@@ -481,7 +484,7 @@ export default function WorkshopTraining() {
         .photo-grid {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
-          grid-template-rows: repeat(2, 260px);
+          grid-auto-rows: 260px;
           gap: 12px;
         }
 

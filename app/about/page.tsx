@@ -57,7 +57,7 @@ const allMembers = [
   },
   {
     image: "/timotius.png",
-    name: "Prof. Dr. Timotius Febry Christian S.T., S.E.., SH.,, M.M., M.T., CSCA., CDS.",
+    name: "Prof. Dr. Timotius Febry Christian S.T., S.E., SH., M.M., M.T., CSCA., CDS.",
     linkedin: "https://www.linkedin.com/in/timotius-febry-cws-3941926b",
     expertise: [
       "Supply Chain Management",
@@ -1473,7 +1473,7 @@ export default function AboutCompany() {
                 />
               </div>
               <p className="welcome-photo-name">
-                Prof. Dr. Timotius Febry Christian S.T., S.E.., SH.,, M.M., M.T., CSCA., CDS.
+                Prof. Dr. Timotius Febry Christian S.T., S.E., SH., M.M., M.T., CSCA., CDS.
                 CDS
               </p>
               <p className="welcome-photo-title">
