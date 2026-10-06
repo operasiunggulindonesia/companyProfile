@@ -340,7 +340,7 @@ export default function Footer() {
                     />
                   </span>
                   <a
-                    href="https://maps.app.goo.gl/WYJQrydV51JepeLFA"
+                    href="https://www.google.com/maps/place/LeanCore+Consulting/@-7.2867379,112.6965561,17z/data=!3m1!4b1!4m6!3m5!1s0x2dd7fd0033727d5b:0x4ad52af9ea3e8c22!8m2!3d-7.2867379!4d112.699131!16s%2Fg%2F11zz1gfxkz"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="footer-contact-link"

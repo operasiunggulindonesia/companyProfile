@@ -691,7 +691,7 @@ export default function Contact() {
                 <p className="map-col-label">LeanCore Office, Surabaya</p>
                 <div className="map-wrap">
                   <iframe
-                    src="https://www.google.com/maps?q=Voza%20Tower%20Surabaya&output=embed"
+                    src="https://www.google.com/maps?q=LeanCore%20Consulting%2C%20Surabaya&output=embed"
                     allowFullScreen
                     loading="lazy"
                     title="LeanCore Office Location"
