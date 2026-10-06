@@ -124,7 +124,7 @@ const certifications = [
       },
     ],
   },
-   {
+  {
     title: "Certified Professional in Logistics Management (CPLM)",
     summary: "Strategic logistics management covering distribution, transportation, and supply chain operations.",
     syllabusUrl: "/silabus/silabus-cplm.pdf",
@@ -173,6 +173,19 @@ const aafmCredentials = [
     title: "Over 25+ Professional Designations",
     desc: "Covering Wealth Management, Supply Chain, Retail, Business Analysis, and Finance for professionals at every level.",
   },
+];
+
+// DATA FOTO GALERI: Memisahkan data array foto agar kode lebih bersih
+const projectImages = [
+  "/services/certif/certif.jpeg",
+  "/services/certif/certif1.jpeg",
+  "/services/certif/certif2.jpeg",
+  "/services/certif/certif3.jpeg",
+  "/services/certif/certif4.jpeg",
+  "/services/certif/certif5.jpeg",
+  "/services/certif/certif7.png",
+  "/services/certif/certif6.png",
+  
 ];
 
 export default function InternationalCertification() {
@@ -281,7 +294,7 @@ export default function InternationalCertification() {
         }
 
         .ic-hero-title {
-          font-family: 'Roboto',;
+          font-family: 'Roboto', sans-serif;
           font-size: clamp(36px, 5.5vw, 64px);
           font-weight: 800;
           color: #fff;
@@ -335,7 +348,7 @@ export default function InternationalCertification() {
         }
 
         .sec-title {
-          font-family: 'Roboto',;
+          font-family: 'Roboto', sans-serif;
           font-size: clamp(26px, 3.5vw, 38px);
           font-weight: 700;
           color: #004276;
@@ -363,7 +376,7 @@ export default function InternationalCertification() {
         }
 
         .intro-overview-title {
-          font-family: 'Roboto',;
+          font-family: 'Roboto', sans-serif;
           font-size: 22px;
           font-weight: 700;
           color: #FACC15;
@@ -388,7 +401,7 @@ export default function InternationalCertification() {
         }
 
         .intro-list-title {
-          font-family: 'Roboto',;
+          font-family: 'Roboto', sans-serif;
           font-size: 20px;
           font-weight: 700;
           color: #004276;
@@ -441,7 +454,7 @@ export default function InternationalCertification() {
         }
 
         .aafm-intro-title {
-          font-family: 'Roboto',;
+          font-family: 'Roboto', sans-serif;
           font-size: 28px;
           font-weight: 700;
           color: #004276;
@@ -529,7 +542,7 @@ export default function InternationalCertification() {
         }
 
         .lc-aafm-title {
-          font-family: 'Roboto',;
+          font-family: 'Roboto', sans-serif;
           font-size: 22px;
           font-weight: 700;
           color: #004276;
@@ -588,7 +601,7 @@ export default function InternationalCertification() {
         .accordion-btn:hover { background: #F8FAFC; }
 
         .accordion-title {
-          font-family: 'Roboto',;
+          font-family: 'Roboto', sans-serif;
           font-size: 16px;
           font-weight: 700;
           color: #004276;
@@ -729,10 +742,10 @@ export default function InternationalCertification() {
           transform: translateY(-2px);
         }
 
-        /* ── PREVIOUS PROJECTS ── */
+        /* ── PREVIOUS PROJECTS (Dirapikan) ── */
         .prev-section { background: #fff; }
 
-        .prev-header { text-align: center; margin-bottom: 40px; }
+        .prev-header { text-align: center; margin-bottom: 48px; }
 
         .prev-header-desc {
           font-size: 14px;
@@ -743,20 +756,57 @@ export default function InternationalCertification() {
           line-height: 1.75;
         }
 
-        .prev-images {
+        /* ── AUTO SCROLL PROJECTS ── */
+        .prev-images-wrapper {
+          width: 100%;
+          overflow: hidden;
+          padding: 10px 0;
+        }
+
+        .prev-images-track {
           display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 20px;
+          grid-template-rows: repeat(2, 1fr); /* Layout 2 Baris */
+          grid-auto-flow: column;
+          gap: 16px;
+          width: max-content;
+          animation: scrollLeft 30s linear infinite; /* Scroll ke kiri */
+        }
+
+        /* Berhenti scroll saat kursor diarahkan ke gambar (opsional) */
+        .prev-images-track:hover {
+          animation-play-state: paused;
+        }
+
+        @keyframes scrollLeft {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(calc(-50% - 8px)); } /* -8px dari setengah gap (16px) */
         }
 
         .prev-img-wrap {
           background: #F8FAFC;
           border: 1px solid #E2E8F0;
           border-top: 3px solid #FACC15;
-          padding: 16px;
+          padding: 8px;
+          border-radius: 6px;
           display: flex;
           align-items: center;
           justify-content: center;
+          overflow: hidden;
+          transition: box-shadow 0.3s ease, transform 0.3s ease;
+          width: 320px; /* Ukuran fix agar scroll rapi */
+          height: 220px;
+        }
+        
+        .prev-img-wrap:hover {
+          box-shadow: 0 10px 25px rgba(0, 66, 118, 0.1);
+          transform: translateY(-4px);
+        }
+
+        .prev-img-wrap img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 4px;
         }
 
         /* ── CTA ── */
@@ -796,7 +846,7 @@ export default function InternationalCertification() {
         .cta-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; color: #FACC15; margin-bottom: 14px; position: relative; }
 
         .cta-title {
-          font-family: 'Roboto',;
+          font-family: 'Roboto', sans-serif;
           font-size: clamp(24px, 3vw, 34px);
           font-weight: 700;
           color: #fff;
@@ -848,11 +898,15 @@ export default function InternationalCertification() {
 
         .wa-float:hover { background: #1EBE5D; transform: translateY(-2px); }
         .wa-float-label { display: none; }
+        
+        /* ── RESPONSIVE MEDIA QUERIES ── */
         @media (min-width: 768px) { .wa-float-label { display: inline; } }
 
         @media (max-width: 1024px) {
           .aafm-creds-grid { grid-template-columns: repeat(2, 1fr); }
           .accordion-topics { grid-template-columns: 1fr; }
+          /* Tablet: Galeri menjadi 2 kolom */
+          .prev-images { grid-template-columns: repeat(2, 1fr); } 
         }
 
         @media (max-width: 768px) {
@@ -863,6 +917,7 @@ export default function InternationalCertification() {
           .aafm-intro-grid { grid-template-columns: 1fr; }
           .lc-aafm-grid { grid-template-columns: 1fr; }
           .aafm-creds-grid { grid-template-columns: 1fr; }
+          /* Mobile: Galeri menjadi 1 kolom */
           .prev-images { grid-template-columns: 1fr; }
           .cta-section { padding: 56px 24px; }
           .cta-inner { padding: 48px 28px; }
@@ -1186,66 +1241,20 @@ export default function InternationalCertification() {
               </p>
             </div>
 
-            <div className="prev-images">
-              <div className="prev-img-wrap">
-                <Image
-                  src="/services/certif/certif.jpeg"
-                  alt="LeanCore Certification"
-                  width={500}
-                  height={350}
-                  className="object-contain"
-                  style={{ maxHeight: 300 }}
-                />
-              </div>
-              <div className="prev-img-wrap">
-                <Image
-                  src="/services/certif/certif1.jpeg"
-                  alt="AAFM Certification Example"
-                  width={500}
-                  height={350}
-                  className="object-contain"
-                  style={{ maxHeight: 300 }}
-                />
-              </div>
-              <div className="prev-img-wrap">
-                <Image
-                  src="/services/certif/certif2.jpeg"
-                  alt="AAFM Certification Example"
-                  width={500}
-                  height={350}
-                  className="object-contain"
-                  style={{ maxHeight: 300 }}
-                />
-              </div>
-              <div className="prev-img-wrap">
-                <Image
-                  src="/services/certif/certif3.jpeg"
-                  alt="AAFM Certification Example"
-                  width={500}
-                  height={350}
-                  className="object-contain"
-                  style={{ maxHeight: 300 }}
-                />
-              </div>
-              <div className="prev-img-wrap">
-                <Image
-                  src="/services/certif/certif4.jpeg"
-                  alt="AAFM Certification Example"
-                  width={500}
-                  height={350}
-                  className="object-contain"
-                  style={{ maxHeight: 300 }}
-                />
-              </div>
-              <div className="prev-img-wrap">
-                <Image
-                  src="/services/certif/certif5.jpeg"
-                  alt="AAFM Certification Example"
-                  width={500}
-                  height={350}
-                  className="object-contain"
-                  style={{ maxHeight: 300 }}
-                />
+            {/* Render foto auto-scroll dengan clean array (otomatis duplikasi array) */}
+            <div className="prev-images-wrapper">
+              <div className="prev-images-track">
+                {[...projectImages, ...projectImages].map((src, index) => (
+                  <div key={index} className="prev-img-wrap">
+                    <Image
+                      src={src}
+                      alt={`LeanCore Certification Project ${index + 1}`}
+                      width={400}
+                      height={240}
+                      className="object-cover"
+                    />
+                  </div>
+                ))}
               </div>
             </div>
           </div>

@@ -88,6 +88,17 @@ const projects = [
   "And many more engagements across industries.",
 ];
 
+const projectImages = [
+  "/services/bmc/bmc.jpeg",
+  "/services/bmc/bmc1.jpeg",
+  "/services/bmc/bmc2.jpeg",
+  "/services/bmc/bmc3.jpeg",
+  "/services/bmc/bmc4.jpeg",
+  "/services/bmc/bmc6.jpeg",
+  "/services/bmc/bmc7.png",
+  "/services/bmc/bmc8.png",
+];
+
 export default function BusinessAdvisor() {
   return (
     <>
@@ -497,20 +508,44 @@ export default function BusinessAdvisor() {
 
         .project-card:hover .project-arrow { color: #FACC15; }
 
-        .projects-images {
+        /* ── AUTO SCROLL PROJECTS ── */
+        .projects-images-wrapper {
+          width: 100%;
+          overflow: hidden;
+          padding: 10px 0;
+        }
+
+        .projects-images-track {
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(2, 1fr);
+          grid-auto-flow: column;
           gap: 16px;
+          width: max-content;
+          /* Ganti nama animasinya menjadi scrollLeft */
+          animation: scrollLeft 30s linear infinite;
+        }
+
+        /* Berhenti scroll saat kursor diarahkan ke gambar (opsional) */
+        .projects-images-track:hover {
+          animation-play-state: paused;
+        }
+
+        /* Ubah nilai 0% dan 100% agar bergerak ke kiri */
+        @keyframes scrollLeft {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(calc(-50% - 8px)); }
         }
 
         .projects-img-wrap {
           overflow: hidden;
           border-top: 3px solid #FACC15;
+          width: 320px; /* Lebar gambar fix agar scroll rapi */
+          height: 200px;
         }
 
         .projects-img-wrap img {
           width: 100%;
-          height: 240px;
+          height: 100%;
           object-fit: cover;
           display: block;
           transition: transform 0.5s ease;
@@ -823,24 +858,20 @@ export default function BusinessAdvisor() {
               ))}
             </motion.div>
 
-            <div className="projects-images">
-              {[
-                "/services/bmc/bmc.jpeg",
-                "/services/bmc/bmc1.jpeg",
-                "/services/bmc/bmc2.jpeg",
-                "/services/bmc/bmc3.jpeg",
-                "/services/bmc/bmc4.jpeg",
-                "/services/bmc/bmc6.jpeg",
-              ].map((src, i) => (
-                <div key={i} className="projects-img-wrap">
-                  <Image
-                    src={src}
-                    alt={`Consulting Project ${i + 1}`}
-                    width={400}
-                    height={240}
-                  />
-                </div>
-              ))}
+            <div className="projects-images-wrapper">
+              <div className="projects-images-track">
+                {/* Array digabungkan otomatis di sini agar kode tetap bersih, namun animasi tetap seamless */}
+                {[...projectImages, ...projectImages].map((src, i) => (
+                  <div key={i} className="projects-img-wrap">
+                    <Image
+                      src={src}
+                      alt={`Consulting Project ${i + 1}`}
+                      width={400}
+                      height={240}
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>

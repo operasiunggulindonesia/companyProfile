@@ -84,8 +84,11 @@ const workshopPhotos = [
   { src: "/services/workshop/workshop1.png" },
   { src: "/services/workshop/workshop2.jpeg" },
   { src: "/services/workshop/workshop3.jpeg" },
-  { src: "/services/workshop/workshop5.jpg" },
+  // { src: "/services/workshop/workshop5.jpg" },
+  {src: "/services/workshop/workshop7.png" },
+  { src: "/services/workshop/workshop6.png" },
   { src: "/services/workshop/workshop4.jpg" },
+  
   
 ];
 
@@ -481,11 +484,30 @@ export default function WorkshopTraining() {
           letter-spacing: 0.1em;
         }
 
-        .photo-grid {
+        /* ── AUTO SCROLL PHOTOS ── */
+        .photo-showcase-wrapper {
+          width: 100%;
+          overflow: hidden;
+          padding: 10px 0;
+        }
+
+        .photo-showcase-track {
           display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          grid-auto-rows: 260px;
+          grid-template-rows: repeat(2, 1fr); /* Layout 2 baris */
+          grid-auto-flow: column;
           gap: 12px;
+          width: max-content;
+          animation: scrollLeftPhotos 35s linear infinite; /* Animasi ke kiri */
+        }
+
+        /* Berhenti scroll saat kursor diarahkan ke gambar */
+        .photo-showcase-track:hover {
+          animation-play-state: paused;
+        }
+
+        @keyframes scrollLeftPhotos {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(calc(-50% - 6px)); } /* -6px dari setengah gap (12px) */
         }
 
         .photo-item {
@@ -493,7 +515,10 @@ export default function WorkshopTraining() {
           overflow: hidden;
           background: #F1F5F9;
           border: 1px solid #E2E8F0;
+          border-radius: 6px;
           cursor: pointer;
+          width: 320px; /* Ukuran fix agar scroll rapi */
+          height: 220px;
         }
 
         .photo-item::after {
@@ -540,21 +565,6 @@ export default function WorkshopTraining() {
         .photo-item:hover .photo-item-overlay {
           opacity: 1;
           transform: translateY(0);
-        }
-
-        .photo-item-label {
-          font-size: 11px;
-          font-weight: 600;
-          color: #fff;
-          letter-spacing: 0.1em;
-          text-transform: uppercase;
-        }
-
-        .photo-item-num {
-          font-size: 10px;
-          font-weight: 400;
-          color: #FACC15;
-          margin-top: 2px;
         }
 
         /* ── CTA ── */
@@ -858,35 +868,25 @@ export default function WorkshopTraining() {
                 </motion.div>
               ))}
             </motion.div>
-
-            {/* ── PHOTO SHOWCASE ── */}
-            <div className="photo-showcase">
-              <div className="photo-showcase-header">
-                <span className="photo-showcase-label">DOCUMENTATION</span>
-                <span className="photo-showcase-line" />
+ 
+            {/* ── AUTO SCROLL PHOTO SHOWCASE ── */}
+              <div className="photo-showcase-wrapper">
+                <div className="photo-showcase-track">
+                  {/* Array digabungkan otomatis untuk animasi yang seamless */}
+                  {[...workshopPhotos, ...workshopPhotos].map((photo, i) => (
+                    <div key={i} className="photo-item">
+                      <Image
+                        src={photo.src}
+                        alt={`Workshop photo ${i + 1}`}
+                        fill
+                        className="object-cover"
+                        sizes="320px"
+                      />
+                      <div className="photo-item-overlay"></div>
+                    </div>
+                  ))}
+                </div>
               </div>
-
-              <motion.div
-                className="photo-grid"
-                variants={stagger}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-              >
-                {workshopPhotos.map((photo, i) => (
-                  <motion.div key={i} className="photo-item" variants={fadeUp}>
-                    <Image
-                      src={photo.src}
-                      alt={`Workshop photo ${i + 1}`}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                    />
-                    <div className="photo-item-overlay"></div>
-                  </motion.div>
-                ))}
-              </motion.div>
-            </div>
           </div>
         </section>
 
