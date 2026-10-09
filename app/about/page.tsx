@@ -138,7 +138,7 @@ const trainers = [
   {
     name: "Bagusranu Wahyudi Putra, ST., MM., MMT., CSCA., CSCM., CIPM ",
     position:
-      "Assistant Vice President in Port Planning & Control - PT Petrokimia Gresik",
+      "Vice President of Warehouse & Packaging - PT Petrokimia Gresik",
     linkedin: "https://www.linkedin.com/in/bagusranu/",
     expertise: ["Supply Chain Management"],
   },
