@@ -136,7 +136,7 @@ const trainers = [
   },
  
   {
-    name: "Dr. Ir. Bagusranu Wahyudi Putra, ST., MM., MMT., CSCA., CSCM",
+    name: "Bagusranu Wahyudi Putra, ST., MM., MMT., CSCA., CSCM., CIPM ",
     position:
       "Assistant Vice President in Port Planning & Control - PT Petrokimia Gresik",
     linkedin: "https://www.linkedin.com/in/bagusranu/",
