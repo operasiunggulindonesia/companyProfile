@@ -1474,7 +1474,6 @@ export default function AboutCompany() {
               </div>
               <p className="welcome-photo-name">
                 Prof. Dr. Timotius Febry Christian S.T., S.E., SH., M.M., M.T., CSCA., CDS.
-                CDS
               </p>
               <p className="welcome-photo-title">
                 Associate Professor for Operation Management
