@@ -45,7 +45,6 @@ const universityPartnerLogos = [
   "/partner/utm.png",
   "/partner/matana.png",
   "/partner/unhas.jpg",
-
 ];
 
 const allMembers = [
@@ -77,29 +76,29 @@ const allMembers = [
     ],
   },
   {
-    image: "/insyuzuu.png",
-    name: "Insyuzuu Cahyani Aisyah, S.Kom.",
-    linkedin: "https://www.linkedin.com/in/insyuzuu-cahyani-aisyah",
+    image: "/erinda.png",
+    name: "Erinda Putri Awita, S.Kom.",
+    linkedin: "https://www.linkedin.com/in/erindaputria/",
     expertise: [
       "Design & Develop reliable and scalable software aligned with business goals",
     ],
   },
   {
-    image: "/adhiya.jpeg",
-    name: "Adhiya Nashwa Ardhana",
-    linkedin: "https://www.linkedin.com/in/adhiya-nashwa-8b1a00342/",
+    image: "/dewi.png",
+    name: "Dewi Faizatul Amaniah, A.Md.Pjk.",
+    linkedin: "https://www.linkedin.com/in/dewi-faizatul-amaniah-519a80223/",
     expertise: [
-    "Financial Management & Reporting",
-    "Tax Planning & Compliance",
-    ]
+      "Financial Management & Reporting",
+      "Tax Planning & Compliance",
+    ],
   },
   {
-    image: "/ratih.jpg",
-    name: "Ratih Mar'atus Sholihah",
-    linkedin: "https://www.linkedin.com/in/ratih-mar-atus-sholihah-8a08a1319/",
+    image: "/cagita.png",
+    name: "Cagita Dian Ayunin, A.Md.Kom.",
+    linkedin: "https://www.linkedin.com/in/cagitadian/",
     expertise: [
-    "Design & Develop reliable and scalable software aligned with business goals",
-   ]
+      "Design & Develop reliable and scalable software aligned with business goals",
+    ],
   },
 ];
 
@@ -134,11 +133,10 @@ const trainers = [
     linkedin: "https://www.linkedin.com/in/edward-cesario-cscm-8235561b/",
     expertise: ["Supply Chain Management"],
   },
- 
+
   {
     name: "Bagusranu Wahyudi Putra, ST., MM., MMT., CSCA., CSCM., CIPM ",
-    position:
-      "Vice President of Warehouse & Packaging - PT Petrokimia Gresik",
+    position: "Vice President of Warehouse & Packaging - PT Petrokimia Gresik",
     linkedin: "https://www.linkedin.com/in/bagusranu/",
     expertise: ["Supply Chain Management"],
   },
@@ -1473,7 +1471,8 @@ export default function AboutCompany() {
                 />
               </div>
               <p className="welcome-photo-name">
-                Prof. Dr. Timotius Febry Christian S.T., S.E., SH., M.M., M.T., CSCA., CDS.
+                Prof. Dr. Timotius Febry Christian S.T., S.E., SH., M.M., M.T.,
+                CSCA., CDS.
               </p>
               <p className="welcome-photo-title">
                 Associate Professor for Operation Management
@@ -2090,8 +2089,8 @@ export default function AboutCompany() {
               Our University Partners
             </h2>
             <p className="sec-desc" data-animate data-anim="up" data-delay="2">
-              Partnering with leading academic institutions to support
-              research and development.
+              Partnering with leading academic institutions to support research
+              and development.
             </p>
             <div
               className="sec-divider"
