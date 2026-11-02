@@ -1518,7 +1518,7 @@ export default function AboutCompany() {
               </p>
 
               <div className="welcome-quote-block">
-                <span className="welcome-quote-mark">"</span>
+                <span className="welcome-quote-mark">&quot;</span>
                 <p className="welcome-quote-text">
                   Sustainable improvement starts with mindset and is
                   strengthened through continuous learning and disciplined
@@ -1778,7 +1778,7 @@ export default function AboutCompany() {
               PRIME Values
             </h2>
             <p className="sec-desc" data-animate data-anim="up" data-delay="2">
-              The core principles driving LeanCore's excellence.
+              The core principles driving LeanCore&apos;s excellence.
             </p>
             <div
               className="sec-divider"
