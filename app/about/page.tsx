@@ -1807,7 +1807,7 @@ export default function AboutCompany() {
         </section>
 
         {/* ── OUR PEOPLE (merged) ── */}
-        <section className="team-section">
+        {/* <section className="team-section">
           <div className="sec-wrap">
             <p
               className="sec-eyebrow"
@@ -1880,7 +1880,7 @@ export default function AboutCompany() {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* ── ASSOCIATE TRAINERS ── */}
         <section className="trainers-section">
