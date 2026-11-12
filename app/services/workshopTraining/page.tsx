@@ -85,11 +85,14 @@ const workshopPhotos = [
   { src: "/services/workshop/workshop2.jpeg" },
   { src: "/services/workshop/workshop3.jpeg" },
   // { src: "/services/workshop/workshop5.jpg" },
-  {src: "/services/workshop/workshop7.png" },
+  { src: "/services/workshop/workshop7.png" },
   { src: "/services/workshop/workshop6.png" },
   { src: "/services/workshop/workshop4.jpg" },
-  
-  
+  { src: "/services/workshop/workshop8.jpeg" },
+  { src: "/services/workshop/workshop9.jpeg" },
+  { src: "/services/workshop/workshop10.jpeg" },
+  { src: "/services/workshop/workshop11.jpeg" },
+  { src: "/services/workshop/workshop12.jpeg" },
 ];
 
 export default function WorkshopTraining() {
@@ -868,25 +871,25 @@ export default function WorkshopTraining() {
                 </motion.div>
               ))}
             </motion.div>
- 
+
             {/* ── AUTO SCROLL PHOTO SHOWCASE ── */}
-              <div className="photo-showcase-wrapper">
-                <div className="photo-showcase-track">
-                  {/* Array digabungkan otomatis untuk animasi yang seamless */}
-                  {[...workshopPhotos, ...workshopPhotos].map((photo, i) => (
-                    <div key={i} className="photo-item">
-                      <Image
-                        src={photo.src}
-                        alt={`Workshop photo ${i + 1}`}
-                        fill
-                        className="object-cover"
-                        sizes="320px"
-                      />
-                      <div className="photo-item-overlay"></div>
-                    </div>
-                  ))}
-                </div>
+            <div className="photo-showcase-wrapper">
+              <div className="photo-showcase-track">
+                {/* Array digabungkan otomatis untuk animasi yang seamless */}
+                {[...workshopPhotos, ...workshopPhotos].map((photo, i) => (
+                  <div key={i} className="photo-item">
+                    <Image
+                      src={photo.src}
+                      alt={`Workshop photo ${i + 1}`}
+                      fill
+                      className="object-cover"
+                      sizes="320px"
+                    />
+                    <div className="photo-item-overlay"></div>
+                  </div>
+                ))}
               </div>
+            </div>
           </div>
         </section>
 
