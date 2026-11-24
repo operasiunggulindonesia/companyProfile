@@ -23,6 +23,21 @@ export async function generateMetadata({
 
 function renderBlock(block: ArticleBlock, index: number) {
   switch (block.type) {
+    case "image":
+      return (
+        <figure key={index} className="my-8">
+          <img
+            src={block.src}
+            alt={block.alt}
+            className="w-full h-auto rounded-lg"
+          />
+          {block.caption && (
+            <figcaption className="mt-2 text-sm text-gray-500 text-center">
+              {block.caption}
+            </figcaption>
+          )}
+        </figure>
+      );
     case "heading":
       return (
         <h2 key={index} className="article-body-heading">

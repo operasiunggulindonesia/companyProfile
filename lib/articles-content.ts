@@ -3,8 +3,13 @@ export type ArticleBlock =
   | { type: "heading"; text: string }
   | { type: "list"; items: string[] }
   | { type: "quote"; text: string }
-  | { type: "table"; headers: string[]; rows: string[][] };
-
+  | { type: "table"; headers: string[]; rows: string[][] }
+  | {
+      type: "image";
+      src: string;
+      alt: string;
+      caption?: string;
+    };
 export interface ArticleContent {
   slug: string;
   image: string;
@@ -19,6 +24,177 @@ export interface ArticleContent {
 }
 
 export const articlesContent: ArticleContent[] = [
+  {
+    slug: "prof-timotius-febry-christian-nominasi-logisym-awards-2026",
+    image: "/article/article4.png",
+    category: "COMPANY NEWS",
+    date: "November 2026",
+    readTime: "4 min read",
+    title:
+      "Prof. Dr. Timotius Febry Christian Masuk Nominasi Innovation Leader of the Year LogiSYM Awards Indonesia 2026",
+    excerpt:
+      "Prof. Dr. Timotius Febry Christian dari LeanCore Consulting masuk dalam daftar nominasi Innovation Leader of the Year pada LogiSYM Awards Indonesia 2026, sebuah ajang penghargaan yang mengapresiasi kontribusi individu dan perusahaan terhadap perkembangan industri logistik dan supply chain di Indonesia.",
+    author: "LeanCore Consulting",
+    authorRole: "Corporate News",
+    body: [
+      {
+        type: "paragraph",
+        text: "Industri logistik dan supply chain terus mengalami perkembangan seiring dengan perubahan kebutuhan bisnis, kemajuan teknologi, serta meningkatnya tuntutan efisiensi operasional. Dalam perkembangannya, inovasi dan kepemimpinan menjadi dua aspek penting yang turut mendorong transformasi industri.",
+      },
+      {
+        type: "paragraph",
+        text: "Sebagai bagian dari upaya mengapresiasi kontribusi para pelaku industri, LogiSYM bersama BSC (The Supply Chain Community) menyelenggarakan LogiSYM Awards Indonesia 2026. Ajang ini memberikan pengakuan kepada individu dan perusahaan yang menunjukkan keunggulan serta kontribusi terhadap perkembangan industri logistik dan rantai pasok di Indonesia.",
+      },
+
+      {
+        type: "heading",
+        text: "Mengenal LogiSYM dan LogiSYM Awards Indonesia 2026",
+      },
+      {
+        type: "paragraph",
+        text: "LogiSYM merupakan platform yang berfokus pada komunitas supply chain di Asia melalui publikasi, simposium, dan berbagai kegiatan industri. Platform ini menjadi wadah untuk mempertemukan para profesional, pemimpin industri, serta pihak-pihak yang memiliki perhatian terhadap perkembangan manajemen rantai pasok.",
+      },
+      {
+        type: "paragraph",
+        text: "Dalam penyelenggaraan LogiSYM Awards Indonesia 2026, LogiSYM bekerja sama dengan BSC (The Supply Chain Community) untuk memberikan apresiasi kepada individu maupun perusahaan yang telah menunjukkan keunggulan dalam industri logistik, transportasi, dan supply chain.",
+      },
+      {
+        type: "paragraph",
+        text: "Penghargaan ini mencakup beberapa kelompok kategori, yaitu Corporate Awards, Leadership Awards, dan Women Breaking Barriers. Setiap kategori memiliki fokus penilaian yang berbeda sesuai dengan kontribusi dan bidang yang diapresiasi.",
+      },
+      {
+        type: "paragraph",
+        text: "Salah satu kategori dalam kelompok Leadership Awards adalah Innovation Leader of the Year, yang memberikan perhatian pada peran individu dalam memperkenalkan dan mengimplementasikan pendekatan inovatif di bidang logistik dan supply chain management.",
+      },
+      {
+        type: "heading",
+        text: "Prof. Dr. Timotius Febry Christian Masuk Nominasi",
+      },
+      {
+        type: "paragraph",
+        text: "LeanCore Consulting turut mendapat perhatian dalam ajang tersebut melalui masuknya Prof. Dr. Timotius Febry Christian, S.T., S.E., S.H., M.M., M.T., CSCA, CDS, dalam daftar nominasi kategori Innovation Leader of the Year.",
+      },
+      {
+        type: "image",
+        src: "/nominee.jpeg",
+        alt: "Daftar nominasi Innovation Leader of the Year LogiSYM Awards Indonesia 2026",
+        caption:
+          "Daftar nominasi kategori Innovation Leader of the Year pada LogiSYM Awards Indonesia 2026.",
+      },
+      {
+        type: "paragraph",
+        text: "Prof. Dr. Timotius Febry Christian menjadi salah satu dari enam kandidat yang tercantum dalam kategori tersebut. Daftar nominasi ini mempertemukan individu dari berbagai perusahaan dan organisasi yang bergerak dalam ekosistem logistik dan supply chain.",
+      },
+      {
+        type: "paragraph",
+        text: "Masuknya nama Prof. Dr. Timotius Febry Christian dalam daftar nominasi menjadi bentuk pengakuan atas keterwakilan LeanCore Consulting dalam ajang apresiasi industri tersebut. Status ini merupakan nominasi, bukan pengumuman sebagai penerima penghargaan.",
+      },
+
+      {
+        type: "heading",
+        text: "Mengenal Kategori Innovation Leader of the Year",
+      },
+      {
+        type: "paragraph",
+        text: "Innovation Leader of the Year merupakan kategori yang ditujukan untuk individu yang menunjukkan kepemimpinan dalam memperkenalkan dan menerapkan pendekatan inovatif di bidang logistik dan manajemen rantai pasok.",
+      },
+      {
+        type: "paragraph",
+        text: "Dalam kriteria penilaiannya, LogiSYM memberikan perhatian pada implementasi inovasi yang telah melampaui tahap gagasan atau eksperimen dan mampu menghasilkan dampak bisnis yang terukur.",
+      },
+      {
+        type: "paragraph",
+        text: "Beberapa bidang inovasi yang termasuk dalam cakupan penilaian antara lain:",
+      },
+      {
+        type: "list",
+        items: [
+          "Artificial Intelligence (AI)",
+          "Automation dan Robotics",
+          "Data Analytics",
+          "Digital Platforms",
+          "Internet of Things (IoT)",
+          "New Operating Models",
+          "Inovasi dalam transportation, warehousing, dan supply chain management",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Selain aspek teknologi, kategori ini juga memperhatikan kemampuan seorang pemimpin dalam menghadapi tantangan implementasi, mengatasi hambatan organisasi, serta mendorong penerapan cara kerja baru secara berkelanjutan.",
+      },
+      {
+        type: "quote",
+        text: "Inovasi tidak hanya dilihat dari gagasan atau teknologi yang diperkenalkan, tetapi juga dari keberhasilan implementasi dan hasil nyata yang dihasilkan bagi bisnis.",
+      },
+
+      { type: "heading", text: "Bagaimana Proses Penilaian Dilakukan?" },
+      {
+        type: "paragraph",
+        text: "LogiSYM Awards Indonesia 2026 menggunakan panel penilai independen yang terdiri dari para pemimpin industri, akademisi, pembuat kebijakan, dan pakar dari tingkat nasional maupun internasional.",
+      },
+      {
+        type: "paragraph",
+        text: "Dalam proses penilaian, setiap kategori memiliki kriteria yang disesuaikan dengan tujuan penghargaan. Khusus untuk Innovation Leader of the Year, perhatian diberikan pada bukti implementasi inovasi dan hasil bisnis yang dapat diukur.",
+      },
+      {
+        type: "paragraph",
+        text: "Pendekatan tersebut menunjukkan bahwa penilaian tidak hanya berfokus pada konsep inovasi, tetapi juga mempertimbangkan bagaimana inovasi diterapkan dan memberikan kontribusi terhadap peningkatan kinerja organisasi maupun industri.",
+      },
+
+      { type: "heading", text: "Jadwal LogiSYM Awards Indonesia 2026" },
+      {
+        type: "paragraph",
+        text: "Puncak penyelenggaraan LogiSYM Awards Indonesia 2026 dijadwalkan berlangsung pada 27 November 2026 di Nusantara International Convention & Exhibition (NICE), PIK 2.",
+      },
+      {
+        type: "paragraph",
+        text: "Pengumuman pemenang akan dilakukan dalam rangkaian acara gala pada hari terakhir penyelenggaraan. Dengan demikian, seluruh kandidat yang masuk dalam daftar nominasi masih berada dalam tahap menunggu hasil akhir penilaian.",
+      },
+      {
+        type: "table",
+        headers: ["Informasi", "Keterangan"],
+        rows: [
+          ["Nama Acara", "LogiSYM Awards Indonesia 2026"],
+          ["Penyelenggara", "LogiSYM bersama BSC Community"],
+          ["Kategori", "Innovation Leader of the Year"],
+          ["Nominee", "Prof. Dr. Timotius Febry Christian"],
+          ["Tanggal Penghargaan", "27 November 2026"],
+          ["Lokasi", "NICE, PIK 2"],
+        ],
+      },
+
+      {
+        type: "heading",
+        text: "Nominasi sebagai Apresiasi dan Momentum ke Depan",
+      },
+      {
+        type: "paragraph",
+        text: "Masuknya Prof. Dr. Timotius Febry Christian dalam nominasi Innovation Leader of the Year menjadi bagian dari keterlibatan LeanCore Consulting dalam ekosistem industri logistik dan supply chain. Nominasi ini juga menjadi kesempatan untuk memperkenalkan peran kepemimpinan dan inovasi sebagai aspek penting dalam perkembangan industri.",
+      },
+      {
+        type: "paragraph",
+        text: "Di tengah perubahan kebutuhan bisnis dan perkembangan teknologi, industri logistik membutuhkan pendekatan yang mampu menjawab tantangan operasional sekaligus mendukung peningkatan kinerja. Oleh karena itu, inovasi yang dapat diterapkan dan memberikan hasil terukur menjadi salah satu aspek yang terus mendapat perhatian.",
+      },
+      {
+        type: "paragraph",
+        text: "LeanCore Consulting memandang nominasi ini sebagai sebuah apresiasi sekaligus momentum untuk terus mengikuti perkembangan inovasi dan transformasi dalam dunia bisnis, logistik, dan supply chain.",
+      },
+
+      { type: "heading", text: "Kesimpulan" },
+      {
+        type: "paragraph",
+        text: "Nominasi Prof. Dr. Timotius Febry Christian dalam kategori Innovation Leader of the Year pada LogiSYM Awards Indonesia 2026 menjadi kabar positif bagi LeanCore Consulting. Ajang ini memberikan ruang apresiasi bagi individu yang dinilai memiliki kontribusi dalam mendorong inovasi di industri logistik dan supply chain.",
+      },
+      {
+        type: "paragraph",
+        text: "Terlepas dari hasil akhir penghargaan, masuknya nama beliau dalam daftar nominasi merupakan bagian dari momentum untuk terus mendorong perhatian terhadap kepemimpinan, inovasi, dan pengembangan industri.",
+      },
+      {
+        type: "quote",
+        text: "Selamat kepada Prof. Dr. Timotius Febry Christian atas nominasi Innovation Leader of the Year pada LogiSYM Awards Indonesia 2026.",
+      },
+    ],
+  },
   {
     slug: "total-quality-management-tqm",
     image: "/article/article1.png",
@@ -284,7 +460,14 @@ export const articlesContent: ArticleContent[] = [
       },
       {
         type: "list",
-        items: ["Machine", "Method", "Material", "Man", "Measurement", "Environment"],
+        items: [
+          "Machine",
+          "Method",
+          "Material",
+          "Man",
+          "Measurement",
+          "Environment",
+        ],
       },
       {
         type: "paragraph",
@@ -501,12 +684,37 @@ export const articlesContent: ArticleContent[] = [
         type: "table",
         headers: ["Aspek", "TQM", "Lean", "Six Sigma"],
         rows: [
-          ["Fokus utama", "Quality culture", "Waste & flow", "Variation & defect"],
+          [
+            "Fokus utama",
+            "Quality culture",
+            "Waste & flow",
+            "Variation & defect",
+          ],
           ["Orientasi", "Organisasi", "Process", "Data & process"],
-          ["Pendekatan", "Management philosophy", "Operational improvement", "Structured problem solving"],
-          ["Contoh tools", "PDCA, Quality Circle", "VSM, 5S, Kanban", "DMAIC, SPC, DOE"],
-          ["Pelaku", "Seluruh organisasi", "Seluruh proses", "Improvement team"],
-          ["Tujuan", "Quality & customer value", "Flow & efficiency", "Process capability"],
+          [
+            "Pendekatan",
+            "Management philosophy",
+            "Operational improvement",
+            "Structured problem solving",
+          ],
+          [
+            "Contoh tools",
+            "PDCA, Quality Circle",
+            "VSM, 5S, Kanban",
+            "DMAIC, SPC, DOE",
+          ],
+          [
+            "Pelaku",
+            "Seluruh organisasi",
+            "Seluruh proses",
+            "Improvement team",
+          ],
+          [
+            "Tujuan",
+            "Quality & customer value",
+            "Flow & efficiency",
+            "Process capability",
+          ],
         ],
       },
       {
@@ -531,7 +739,10 @@ export const articlesContent: ArticleContent[] = [
         type: "paragraph",
         text: "Walaupun konsep TQM terlihat sederhana, implementasinya tidak selalu mudah. Beberapa tantangan yang sering muncul antara lain:",
       },
-      { type: "heading", text: "1. TQM Dianggap Sebagai Tanggung Jawab Departemen Quality" },
+      {
+        type: "heading",
+        text: "1. TQM Dianggap Sebagai Tanggung Jawab Departemen Quality",
+      },
       {
         type: "paragraph",
         text: "Jika hanya Quality Department yang menjalankan TQM, perubahan organisasi akan sulit terjadi.",
@@ -631,7 +842,7 @@ export const articlesContent: ArticleContent[] = [
           "Sutrisno, T. F., Effendy, J. A., & Prathivi, M. D. G. (2019). Hybrid strategy study: The role of entrepreneurial orientation and total quality management in MSMEs. Jurnal Manajemen dan Kewirausahaan, 7(2), 124–131. https://doi.org/10.26905/jmdk.v7i2.3057",
           "Sutrisno, T. F., & Ardyan, E. (2020). Achieving organizational performance in food companies: The critical role of leadership and continuous improvement as part of TQM practice. Quality-Access to Success, 21(177), 133–138.",
           "Tanjoyo, C., Harianto, E., & Sutrisno, T. F. C. W. (2021). The role of TQM and organizational culture on operational performance. Jurnal Aplikasi Manajemen, 19(4), 938–948. https://doi.org/10.21776/ub.jam.2021.019.04.20",
-          "Utami, C. W., Sutrisno, T. F. C. W., Teofilus, & Ardyan, E. (2021). Can start-up businesses achieve business performance? An overview of the \"soft\" total quality management concept. Quality-Access to Success, 22(181), 105–109.",
+          'Utami, C. W., Sutrisno, T. F. C. W., Teofilus, & Ardyan, E. (2021). Can start-up businesses achieve business performance? An overview of the "soft" total quality management concept. Quality-Access to Success, 22(181), 105–109.',
         ],
       },
     ],
@@ -642,7 +853,8 @@ export const articlesContent: ArticleContent[] = [
     category: "SUPPLY CHAIN",
     date: "Agustus 2026",
     readTime: "14 min read",
-    title: "Inventory Management: Cara Menentukan Safety Stock, Reorder Point, dan EOQ",
+    title:
+      "Inventory Management: Cara Menentukan Safety Stock, Reorder Point, dan EOQ",
     excerpt:
       "Inventory management merupakan salah satu aspek penting dalam supply chain management. Persediaan yang terlalu tinggi dapat mengikat modal kerja dan meningkatkan biaya penyimpanan, sedangkan persediaan yang terlalu rendah dapat menyebabkan stockout, keterlambatan pengiriman, hingga kehilangan penjualan.",
     author: "LeanCore Consulting",
@@ -778,7 +990,7 @@ export const articlesContent: ArticleContent[] = [
       },
       {
         type: "quote",
-        text: "ROP menjawab pertanyaan: \"Kapan perusahaan harus melakukan order?\"",
+        text: 'ROP menjawab pertanyaan: "Kapan perusahaan harus melakukan order?"',
       },
       {
         type: "paragraph",
@@ -814,7 +1026,7 @@ export const articlesContent: ArticleContent[] = [
       { type: "heading", text: "3. Apa Itu Economic Order Quantity (EOQ)?" },
       {
         type: "paragraph",
-        text: "Jika ROP menjawab pertanyaan \"kapan harus order?\", maka Economic Order Quantity (EOQ) menjawab \"berapa banyak yang sebaiknya dipesan setiap kali melakukan order?\"",
+        text: 'Jika ROP menjawab pertanyaan "kapan harus order?", maka Economic Order Quantity (EOQ) menjawab "berapa banyak yang sebaiknya dipesan setiap kali melakukan order?"',
       },
       {
         type: "paragraph",
@@ -873,9 +1085,21 @@ export const articlesContent: ArticleContent[] = [
         type: "table",
         headers: ["Konsep", "Pertanyaan Utama", "Fungsi"],
         rows: [
-          ["Safety Stock", "Berapa buffer yang diperlukan?", "Menghadapi ketidakpastian"],
-          ["Reorder Point", "Kapan harus melakukan order?", "Menentukan titik replenishment"],
-          ["EOQ", "Berapa jumlah yang harus dipesan?", "Menentukan order quantity optimal"],
+          [
+            "Safety Stock",
+            "Berapa buffer yang diperlukan?",
+            "Menghadapi ketidakpastian",
+          ],
+          [
+            "Reorder Point",
+            "Kapan harus melakukan order?",
+            "Menentukan titik replenishment",
+          ],
+          [
+            "EOQ",
+            "Berapa jumlah yang harus dipesan?",
+            "Menentukan order quantity optimal",
+          ],
         ],
       },
       {
@@ -883,7 +1107,10 @@ export const articlesContent: ArticleContent[] = [
         text: "Dengan kata lain: Safety Stock → Buffer, ROP → Timing, EOQ → Quantity. Ketiganya dapat digunakan secara bersama-sama untuk membangun inventory policy yang lebih terstruktur.",
       },
 
-      { type: "heading", text: "5. Bagaimana Safety Stock, ROP, dan EOQ Bekerja Bersama?" },
+      {
+        type: "heading",
+        text: "5. Bagaimana Safety Stock, ROP, dan EOQ Bekerja Bersama?",
+      },
       {
         type: "paragraph",
         text: "Misalkan perusahaan memiliki: Safety Stock = 74 unit; ROP = 574 unit; EOQ = 693 unit.",
@@ -911,10 +1138,13 @@ export const articlesContent: ArticleContent[] = [
         type: "paragraph",
         text: "Average demand tidak memberikan gambaran mengenai variability. Dua produk dapat memiliki demand rata-rata yang sama tetapi memiliki tingkat fluktuasi yang sangat berbeda. Karena itu, perusahaan perlu melihat Average Demand dan Demand Variability sekaligus.",
       },
-      { type: "heading", text: "2. Menentukan Safety Stock Berdasarkan \"Feeling\"" },
+      {
+        type: "heading",
+        text: '2. Menentukan Safety Stock Berdasarkan "Feeling"',
+      },
       {
         type: "paragraph",
-        text: "Contoh: \"Biasanya kita simpan stok dua minggu.\" Pertanyaan berikutnya adalah, mengapa dua minggu? Safety stock sebaiknya ditentukan berdasarkan faktor yang dapat diukur, seperti demand variability, lead time, service level, supplier reliability, dan forecast accuracy.",
+        text: 'Contoh: "Biasanya kita simpan stok dua minggu." Pertanyaan berikutnya adalah, mengapa dua minggu? Safety stock sebaiknya ditentukan berdasarkan faktor yang dapat diukur, seperti demand variability, lead time, service level, supplier reliability, dan forecast accuracy.',
       },
       { type: "heading", text: "3. Menggunakan Contractual Lead Time" },
       {
@@ -932,7 +1162,10 @@ export const articlesContent: ArticleContent[] = [
         text: "Inventory senilai Rp10 miliar tidak otomatis berarti inventory tersebut terlalu tinggi. Perusahaan juga perlu melihat inventory turnover, days inventory, stockout rate, service level, inventory aging, slow-moving inventory, obsolete inventory, dan forecast accuracy.",
       },
 
-      { type: "heading", text: "7. KPI yang Perlu Dipantau dalam Inventory Management" },
+      {
+        type: "heading",
+        text: "7. KPI yang Perlu Dipantau dalam Inventory Management",
+      },
       {
         type: "paragraph",
         text: "Inventory management yang baik membutuhkan pengukuran kinerja secara berkala. Beberapa KPI yang dapat digunakan adalah:",
@@ -971,10 +1204,13 @@ export const articlesContent: ArticleContent[] = [
         text: "Service level menunjukkan kemampuan perusahaan memenuhi kebutuhan pelanggan tanpa mengalami stockout. Karena itu, inventory management sebaiknya tidak hanya mengejar minimum inventory, tetapi juga mempertimbangkan target service level.",
       },
 
-      { type: "heading", text: "8. Inventory Management Bukan Sekadar Mengurangi Stok" },
+      {
+        type: "heading",
+        text: "8. Inventory Management Bukan Sekadar Mengurangi Stok",
+      },
       {
         type: "paragraph",
-        text: "Salah satu kesalahan paling umum dalam inventory management adalah menganggap \"semakin rendah inventory, semakin baik.\" Padahal tidak selalu demikian.",
+        text: 'Salah satu kesalahan paling umum dalam inventory management adalah menganggap "semakin rendah inventory, semakin baik." Padahal tidak selalu demikian.',
       },
       {
         type: "quote",
@@ -993,7 +1229,10 @@ export const articlesContent: ArticleContent[] = [
         text: "Inventory Optimization = Demand + Lead Time + Service Level + Cost + Risk",
       },
 
-      { type: "heading", text: "9. Dari Inventory Management Menuju Inventory Optimization" },
+      {
+        type: "heading",
+        text: "9. Dari Inventory Management Menuju Inventory Optimization",
+      },
       {
         type: "paragraph",
         text: "Perusahaan yang sudah memiliki sistem inventory management dapat melangkah lebih jauh menuju inventory optimization. Pendekatan yang dapat dilakukan antara lain:",
@@ -1040,7 +1279,7 @@ export const articlesContent: ArticleContent[] = [
       },
       {
         type: "paragraph",
-        text: "Jika sebagian besar jawaban masih \"belum\", kemungkinan perusahaan memiliki peluang yang cukup besar untuk meningkatkan inventory performance.",
+        text: 'Jika sebagian besar jawaban masih "belum", kemungkinan perusahaan memiliki peluang yang cukup besar untuk meningkatkan inventory performance.',
       },
 
       { type: "heading", text: "Kesimpulan" },
@@ -1103,7 +1342,8 @@ export const articlesContent: ArticleContent[] = [
     category: "DEMAND PLANNING",
     date: "Agustus 2026",
     readTime: "16 min read",
-    title: "Demand Forecasting: Cara Forecasting Penjualan dan Menentukan Metode yang Tepat",
+    title:
+      "Demand Forecasting: Cara Forecasting Penjualan dan Menentukan Metode yang Tepat",
     excerpt:
       "Demand forecasting merupakan salah satu proses penting dalam supply chain management. Keputusan mengenai berapa banyak produk yang harus diproduksi, dibeli, disimpan, dan didistribusikan sangat bergantung pada seberapa baik perusahaan memperkirakan permintaan di masa depan.",
     author: "LeanCore Consulting",
@@ -1255,7 +1495,10 @@ export const articlesContent: ArticleContent[] = [
         text: "Misalnya, perusahaan FMCG dapat memiliki demand yang meningkat secara konsisten setiap menjelang hari raya. Jika seasonality tersebut tidak diperhitungkan, forecast dapat menjadi bias.",
       },
 
-      { type: "heading", text: "Metode Demand Forecasting yang Umum Digunakan" },
+      {
+        type: "heading",
+        text: "Metode Demand Forecasting yang Umum Digunakan",
+      },
       { type: "heading", text: "1. Naive Forecast" },
       {
         type: "paragraph",
@@ -1366,7 +1609,10 @@ export const articlesContent: ArticleContent[] = [
         text: "Dengan regression, perusahaan tidak hanya menggunakan historical demand, tetapi juga dapat memasukkan causal factors. Metode ini lebih kompleks tetapi dapat memberikan insight yang lebih dalam.",
       },
 
-      { type: "heading", text: "Bagaimana Memilih Metode Forecasting yang Tepat?" },
+      {
+        type: "heading",
+        text: "Bagaimana Memilih Metode Forecasting yang Tepat?",
+      },
       {
         type: "paragraph",
         text: "Tidak ada satu metode forecasting yang selalu terbaik untuk semua produk. Metode yang tepat tergantung pada pola demand, jumlah data historis, tingkat variability, seasonality, trend, forecast horizon, business context, dan availability of causal variables.",
@@ -1468,10 +1714,13 @@ export const articlesContent: ArticleContent[] = [
       },
       {
         type: "paragraph",
-        text: "Jadi perusahaan tidak cukup hanya bertanya \"Berapa persen forecast accuracy kita?\", tetapi juga \"Apakah forecast kita secara sistematis terlalu tinggi atau terlalu rendah?\"",
+        text: 'Jadi perusahaan tidak cukup hanya bertanya "Berapa persen forecast accuracy kita?", tetapi juga "Apakah forecast kita secara sistematis terlalu tinggi atau terlalu rendah?"',
       },
 
-      { type: "heading", text: "Forecast Accuracy Bukan Satu-Satunya Ukuran Forecast yang Baik" },
+      {
+        type: "heading",
+        text: "Forecast Accuracy Bukan Satu-Satunya Ukuran Forecast yang Baik",
+      },
       {
         type: "paragraph",
         text: "Forecast yang sangat akurat secara statistik belum tentu paling berguna bagi bisnis. Misalnya Forecast A memiliki MAPE 8% dan Forecast B memiliki MAPE 10%. Secara statistik, Forecast A lebih baik.",
@@ -1536,7 +1785,10 @@ export const articlesContent: ArticleContent[] = [
       },
 
       { type: "heading", text: "7 Kesalahan Umum dalam Demand Forecasting" },
-      { type: "heading", text: "1. Menggunakan Satu Metode untuk Semua Produk" },
+      {
+        type: "heading",
+        text: "1. Menggunakan Satu Metode untuk Semua Produk",
+      },
       {
         type: "paragraph",
         text: "Tidak semua SKU memiliki demand pattern yang sama. Produk A mungkin stabil, Produk B mungkin seasonal, dan Produk C mungkin intermittent. Karena itu, satu metode untuk seluruh SKU belum tentu optimal.",
@@ -1572,7 +1824,10 @@ export const articlesContent: ArticleContent[] = [
         text: "Forecast selalu mengandung uncertainty. Karena itu, perusahaan perlu memikirkan forecast bersama variability dan risk, bukan hanya satu angka forecast.",
       },
 
-      { type: "heading", text: "Forecasting yang Baik Membutuhkan Proses, Bukan Sekadar Rumus" },
+      {
+        type: "heading",
+        text: "Forecasting yang Baik Membutuhkan Proses, Bukan Sekadar Rumus",
+      },
       {
         type: "paragraph",
         text: "Perusahaan dapat membangun forecasting process sederhana sebagai berikut:",
@@ -1620,13 +1875,22 @@ export const articlesContent: ArticleContent[] = [
         headers: ["Area", "Pertanyaan"],
         rows: [
           ["Data", "Apakah historical demand tersedia?"],
-          ["Data Quality", "Apakah data sudah dibersihkan dari stockout dan anomaly?"],
+          [
+            "Data Quality",
+            "Apakah data sudah dibersihkan dari stockout dan anomaly?",
+          ],
           ["Demand Pattern", "Apakah trend dan seasonality sudah dianalisis?"],
           ["Method", "Apakah perusahaan menguji lebih dari satu metode?"],
           ["Accuracy", "Apakah MAPE/MAD diukur?"],
           ["Bias", "Apakah forecast bias dipantau?"],
-          ["SKU", "Apakah metode berbeda digunakan untuk demand pattern berbeda?"],
-          ["Business Input", "Apakah Sales/Marketing memberikan market intelligence?"],
+          [
+            "SKU",
+            "Apakah metode berbeda digunakan untuk demand pattern berbeda?",
+          ],
+          [
+            "Business Input",
+            "Apakah Sales/Marketing memberikan market intelligence?",
+          ],
           ["Consensus", "Apakah terdapat proses consensus forecast?"],
           ["Inventory", "Apakah forecast terhubung dengan inventory planning?"],
           ["Review", "Apakah forecast diperbarui secara berkala?"],
@@ -1634,7 +1898,7 @@ export const articlesContent: ArticleContent[] = [
       },
       {
         type: "paragraph",
-        text: "Semakin banyak jawaban \"belum\", semakin besar peluang perusahaan untuk meningkatkan forecast maturity.",
+        text: 'Semakin banyak jawaban "belum", semakin besar peluang perusahaan untuk meningkatkan forecast maturity.',
       },
 
       { type: "heading", text: "Kesimpulan" },
@@ -1656,14 +1920,17 @@ export const articlesContent: ArticleContent[] = [
       },
       {
         type: "paragraph",
-        text: "Pada akhirnya, pertanyaan yang lebih tepat bukan \"Metode forecasting apa yang paling bagus?\", tetapi \"Metode forecasting apa yang paling sesuai dengan karakteristik demand, horizon perencanaan, kualitas data, dan keputusan bisnis yang akan dibuat?\"",
+        text: 'Pada akhirnya, pertanyaan yang lebih tepat bukan "Metode forecasting apa yang paling bagus?", tetapi "Metode forecasting apa yang paling sesuai dengan karakteristik demand, horizon perencanaan, kualitas data, dan keputusan bisnis yang akan dibuat?"',
       },
       {
         type: "paragraph",
         text: "Forecast yang baik bukan forecast yang sekadar menghasilkan angka. Forecast yang baik adalah forecast yang membantu perusahaan membuat keputusan supply chain yang lebih baik.",
       },
 
-      { type: "heading", text: "Ingin Meningkatkan Forecast Accuracy Perusahaan?" },
+      {
+        type: "heading",
+        text: "Ingin Meningkatkan Forecast Accuracy Perusahaan?",
+      },
       {
         type: "paragraph",
         text: "Kesalahan forecasting dapat berdampak langsung pada inventory, purchasing, production, cash flow, dan customer service.",

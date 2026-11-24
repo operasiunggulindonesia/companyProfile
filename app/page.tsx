@@ -77,8 +77,6 @@ const testimonials = [
 ];
 
 const events = [
-
-  
   {
     date: "05",
     month: "SEP",
@@ -1075,6 +1073,190 @@ export default function About() {
         }
         .testimonial-dot.active { width: 24px; background: #004276; }
 
+
+        /* ── INDUSTRY RECOGNITION ── */
+
+        .recognition-section {
+          background: #F8FAFC;
+          padding: 55px 48px 65px;
+        }
+
+        .recognition-container {
+          max-width: 1000px;
+          margin: 0 auto;
+        }
+
+        .recognition-header {
+          margin-bottom: 22px;
+        }
+
+        .recognition-eyebrow {
+          display: flex;
+          align-items: center;
+          gap: 9px;
+          color: #004276;
+          font-size: 10px;
+          font-weight: 700;
+          letter-spacing: 0.18em;
+          margin-bottom: 9px;
+        }
+
+        .recognition-eyebrow::after {
+          content: "";
+          width: 30px;
+          height: 2px;
+          background: #D6AE42;
+        }
+
+        .recognition-title {
+          font-size: clamp(24px, 3vw, 32px);
+          font-weight: 700;
+          color: #004276;
+          margin-bottom: 7px;
+        }
+
+        .recognition-subtitle {
+          font-size: 13px;
+          color: #64748B;
+          line-height: 1.7;
+        }
+
+        .recognition-card {
+          background: #FFFFFF;
+          border: 1px solid #E2E8F0;
+          border-radius: 10px;
+          padding: 24px 26px;
+          transition: box-shadow 0.25s ease,
+                      transform 0.25s ease;
+        }
+
+        .recognition-card:hover {
+          box-shadow: 0 8px 25px rgba(0, 66, 118, 0.07);
+          transform: translateY(-2px);
+        }
+
+        .recognition-top {
+          display: flex;
+          align-items: center;
+          gap: 18px;
+        }
+
+        .recognition-icon {
+          width: 64px;
+          height: 64px;
+          flex-shrink: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: #EDF3F8;
+          border-radius: 12px;
+          color: #004276;
+          font-size: 28px;
+        }
+
+        .recognition-person {
+          flex: 1;
+          min-width: 0;
+        }
+
+        .recognition-person-name {
+          font-size: 17px;
+          font-weight: 700;
+          color: #1E293B;
+          line-height: 1.5;
+        }
+
+        .recognition-person-company {
+          font-size: 12px;
+          color: #64748B;
+          margin-top: 4px;
+        }
+
+        .recognition-status {
+          flex-shrink: 0;
+          background: #F8F3E5;
+          color: #987323;
+          padding: 9px 13px;
+          border-radius: 6px;
+          font-size: 10px;
+          font-weight: 700;
+          letter-spacing: 0.05em;
+        }
+
+        .recognition-divider {
+          height: 1px;
+          background: #E2E8F0;
+          margin: 22px 0;
+        }
+
+        .recognition-category {
+          font-size: 15px;
+          font-weight: 600;
+          color: #004276;
+          margin-bottom: 12px;
+        }
+
+        .recognition-bottom {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 12px;
+        }
+
+        .recognition-event {
+          font-size: 12px;
+          color: #64748B;
+        }
+
+        .recognition-link {
+          color: #004276;
+          font-size: 11px;
+          font-weight: 700;
+          text-decoration: none;
+          white-space: nowrap;
+          transition: color 0.2s;
+        }
+
+        .recognition-link:hover {
+          color: #B58B27;
+        }
+
+        @media (max-width: 640px) {
+          .recognition-section {
+            padding: 42px 24px 50px;
+          }
+
+          .recognition-card {
+            padding: 20px;
+          }
+
+          .recognition-top {
+            gap: 12px;
+            flex-wrap: wrap;
+          }
+
+          .recognition-icon {
+            width: 48px;
+            height: 48px;
+            font-size: 23px;
+          }
+
+          .recognition-person-name {
+            font-size: 14px;
+          }
+
+          .recognition-status {
+            padding: 7px 9px;
+            font-size: 9px;
+          }
+
+          .recognition-bottom {
+            align-items: flex-start;
+            flex-direction: column;
+          }
+        }
+
+
         /* ── WA FLOAT ── */
         .wa-float {
           position: fixed;
@@ -1142,6 +1324,76 @@ export default function About() {
             </div>
           </div>
           <div className="hero-bottom-fade" />
+        </section>
+
+        {/* ── INDUSTRY RECOGNITION ── */}
+
+        <section className="recognition-section">
+          <div className="recognition-container">
+            {/* Section Header */}
+            <div
+              className="recognition-header"
+              data-animate
+              data-anim="up"
+              data-delay="0"
+            >
+              <p className="recognition-eyebrow">RECOGNITION</p>
+
+              <h2 className="recognition-title">Industry Recognition</h2>
+
+              <p className="recognition-subtitle">
+                Recognizing professional contributions and industry
+                achievements.
+              </p>
+            </div>
+
+            {/* Recognition Card */}
+            <div
+              className="recognition-card"
+              data-animate
+              data-anim="up"
+              data-delay="1"
+            >
+              <div className="recognition-top">
+                <div className="recognition-icon">
+                  <span>♙</span>
+                </div>
+
+                <div className="recognition-person">
+                  <p className="recognition-person-name">
+                    Prof. Dr. Timotius Febry Christian
+                  </p>
+
+                  <p className="recognition-person-company">
+                    LeanCore Consulting
+                  </p>
+                </div>
+
+                <span className="recognition-status">NOMINEE</span>
+              </div>
+
+              <div className="recognition-divider" />
+
+              <p className="recognition-category">
+                Innovation Leader of the Year
+              </p>
+
+              <div className="recognition-bottom">
+                <p className="recognition-event">
+                  LogiSYM Indonesia Awards 2026
+                </p>
+
+                <a
+                  href="https://logisym.org/events/logisym-awards-indonesia-2026"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="recognition-link"
+                >
+                  Learn more ↗
+                </a>
+              </div>
+            </div>
+          </div>
         </section>
 
         {/* ── SERVICES ── */}
