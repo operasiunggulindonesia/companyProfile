@@ -29,6 +29,7 @@ function renderBlock(block: ArticleBlock, index: number) {
           {block.text}
         </h2>
       );
+
     case "list":
       return (
         <ul key={index} className="article-body-list">
@@ -37,12 +38,14 @@ function renderBlock(block: ArticleBlock, index: number) {
           ))}
         </ul>
       );
+
     case "quote":
       return (
         <blockquote key={index} className="article-body-quote">
           {block.text}
         </blockquote>
       );
+
     case "table":
       return (
         <div key={index} className="article-body-table-wrap">
@@ -66,12 +69,30 @@ function renderBlock(block: ArticleBlock, index: number) {
           </table>
         </div>
       );
-    default:
+
+    case "image":
+      return (
+        <figure key={index} className="article-body-image">
+          <Image
+            src={block.src}
+            alt={block.alt}
+            width={1200}
+            height={800}
+            className="w-full h-auto rounded-md"
+          />
+          {block.caption && <figcaption>{block.caption}</figcaption>}
+        </figure>
+      );
+
+    case "paragraph":
       return (
         <p key={index} className="article-body-paragraph">
           {block.text}
         </p>
       );
+
+    default:
+      return null;
   }
 }
 
