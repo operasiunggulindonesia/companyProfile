@@ -77,75 +77,75 @@ const testimonials = [
 ];
 
 const events = [
+  // {
+  //   date: "05",
+  //   month: "SEP",
+  //   title:
+  //     "The Resilient Enterprise: Mitigasi Risiko Bisnis di Tengah Krisis Ekonomi",
+  //   type: "WEBINAR",
+  //   link: "https://www.instagram.com/leancore_consultant/",
+  // },
+  // {
+  //   date: "12-13",
+  //   month: "SEP",
+  //   title: "CIPM - Certified Integrated Production Manager",
+  //   batch: "BATCH 2",
+  //   type: "CERTIFICATION PROGRAM",
+  //   link: "https://www.instagram.com/leancore_consultant/",
+  // },
+  // {
+  //   date: "2-3",
+  //   month: "OCT",
+  //   title: "CFDM - Certified Factory & Digital Manufacturing",
+  //   batch: "BATCH 2",
+  //   type: "CERTIFICATION PROGRAM",
+  //   link: "https://www.instagram.com/leancore_consultant/",
+  // },
+  // {
+  //   date: "9",
+  //   month: "OCT",
+  //   title: "Strategic Business Reengineering: Designing Future-Ready Growth",
+  //   type: "PUBLIC TRAINING",
+  //   link: "https://www.instagram.com/leancore_consultant/",
+  // },
+  // {
+  //   date: "24",
+  //   month: "OCT",
+  //   title:
+  //     "Production Mastery: OEE & Lead Time Optimization dalam Industri Manufaktur",
+  //   type: "WEBINAR",
+  //   link: "https://www.instagram.com/leancore_consultant/",
+  // },
   {
-    date: "05",
-    month: "SEP",
-    title:
-      "The Resilient Enterprise: Mitigasi Risiko Bisnis di Tengah Krisis Ekonomi",
-    type: "WEBINAR",
-    link: "https://www.instagram.com/leancore_consultant/",
-  },
-  {
-    date: "12-13",
-    month: "SEP",
-    title: "CIPM - Certified Integrated Production Manager",
-    batch: "BATCH 2",
+    date: "DEC",
+    month: "Week 2",
+    title: "CPLM - Certified Professional in Logistics Management",
+    batch: "BATCH 1",
     type: "CERTIFICATION PROGRAM",
-    link: "https://www.instagram.com/leancore_consultant/",
+    link: "https://api.whatsapp.com/send/?phone=6281803540000&text=Halo%20LeanCore%20Consulting%2C%20saya%20tertarik%20untuk%20mengetahui%20informasi%20lebih%20lanjut%20mengenai%20program%20CPLM%20%28Certified%20Professional%20in%20Logistics%20Management%29%20Batch%201.&type=phone_number&app_absent=0",
   },
   {
-    date: "2-3",
-    month: "OCT",
-    title: "CFDM - Certified Factory & Digital Manufacturing",
-    batch: "BATCH 2",
-    type: "CERTIFICATION PROGRAM",
-    link: "https://www.instagram.com/leancore_consultant/",
-  },
-  {
-    date: "9",
-    month: "OCT",
-    title: "Strategic Business Reengineering: Designing Future-Ready Growth",
-    type: "PUBLIC TRAINING",
-    link: "https://www.instagram.com/leancore_consultant/",
-  },
-  {
-    date: "24",
-    month: "OCT",
-    title:
-      "Production Mastery: OEE & Lead Time Optimization dalam Industri Manufaktur",
-    type: "WEBINAR",
-    link: "https://www.instagram.com/leancore_consultant/",
-  },
-  {
-    date: "6-7",
-    month: "NOV",
-    title: "CSBA - Certified Strategic Business Analyst",
-    batch: "BATCH 2",
-    type: "CERTIFICATION PROGRAM",
-    link: "https://www.instagram.com/leancore_consultant/",
-  },
-  {
-    date: "28",
-    month: "NOV",
-    title:
-      "Strategic Decision Making: Dari Data Analyst Menjadi Business Partner",
-    type: "WEBINAR",
-    link: "https://www.instagram.com/leancore_consultant/",
-  },
-  {
-    date: "11",
-    month: "DEC",
-    title: "The Future Leader: Lean Leadership & Organizational Agility",
-    type: "PUBLIC TRAINING",
-    link: "https://www.instagram.com/leancore_consultant/",
-  },
-  {
-    date: "18-19",
-    month: "DEC",
+    date: "DEC",
+    month: "Week 3",
     title: "CSCM - Certified Supply Chain Manager",
-    batch: "BATCH 2",
+    batch: "BATCH 3",
     type: "CERTIFICATION PROGRAM",
-    link: "https://www.instagram.com/leancore_consultant/",
+    link: "https://api.whatsapp.com/send/?phone=6281803540000&text=Halo%20LeanCore%20Consulting%2C%20saya%20tertarik%20untuk%20mengetahui%20informasi%20lebih%20lanjut%20mengenai%20program%20CSCM%20%28Certified%20Supply%20Chain%20Manager%29%20Batch%203.&type=phone_number&app_absent=0",
+  },
+  {
+    date: "19–20",
+    month: "DEC",
+    title: "Lean Operations & Cost Reduction",
+    type: "WORKSHOP",
+    link: "https://api.whatsapp.com/send/?phone=6281803540000&text=Halo%20LeanCore%20Consulting%2C%20saya%20tertarik%20untuk%20mengetahui%20informasi%20lebih%20lanjut%20mengenai%20Workshop%20Lean%20Operations%20%26%20Cost%20Reduction%20tanggal%2019%E2%80%9320%20Desember.&type=phone_number&app_absent=0",
+  },
+  {
+    date: "DEC",
+    month: "Week 4",
+    title: "CSBA - Certified Strategic Business Analyst",
+    batch: "BATCH 7",
+    type: "CERTIFICATION PROGRAM",
+    link: "https://api.whatsapp.com/send/?phone=6281803540000&text=Halo%20LeanCore%20Consulting%2C%20saya%20tertarik%20untuk%20mengetahui%20informasi%20lebih%20lanjut%20mengenai%20program%20CSBA%20%28Certified%20Strategic%20Business%20Analyst%29%20Batch%207.&type=phone_number&app_absent=0",
   },
 ];
 
@@ -160,6 +160,7 @@ const typeConfig: Record<
   },
   WEBINAR: { dot: "#0E7490", badge: "#0E7490", dateBg: "#0E7490" },
   "PUBLIC TRAINING": { dot: "#FACC15", badge: "#FACC15", dateBg: "#FACC15" },
+  WORKSHOP: { dot: "#D69B78", badge: "#D69B78", dateBg: "#D69B78" },
 };
 
 const services = [
